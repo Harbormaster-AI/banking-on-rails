@@ -7,10 +7,10 @@ class Customer < ApplicationRecord
   composed_of :address,
     class_name: "Address",
     mapping: [
-      %w[address_street street]
-      %w[address_city city]
-      %w[address_state state]
-      %w[address_postalCode postalCode]
+      ${$mapping}, 
+      ${$mapping}, 
+      ${$mapping}, 
+      ${$mapping}, 
       %w[address_country country]
     ]
   has_many :Bank, class_name: 'Bank'
