@@ -2,13 +2,13 @@ require_relative 'lib/rubydemo/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'bankingonrails'
-  spec.version       = ''
-  spec.authors       = [""]
-  spec.email         = ["put_your_email_here@xyz.com"]
-  spec.summary       = %q{Put description name here}
+  spec.version       = '0.0.1'
+  spec.authors       = ["Harbormaster Dev Team"]
+  spec.email         = ["xxxx.xxxxxxxxx@xxxxxxxx.com"]
+  spec.summary       = %q{Banking System}
   spec.homepage      = "https://put-your-home-page-here.com"
   spec.license       = "MIT"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
+  spec.required_ruby_version = Gem::Requirement.new(">= 3.4.5")
 
   spec.metadata["allowed_push_host"] = "http://mygemserver.com"
 
