@@ -1,0 +1,24 @@
+FROM ruby:3.4-slim
+
+WORKDIR /app
+
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       build-essential \
+       pkg-config \
+       libyaml-dev \
+       default-libmysqlclient-dev \
+       \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY Gemfile ./
+COPY $appName.gemspec ./
+
+RUN bundle install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
