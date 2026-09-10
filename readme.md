@@ -7,7 +7,7 @@ Harbormaster
 
 
 ## Application
-- Name: bankingOnRails
+- Name: bankingonrails
 - Description: Banking System
 - Company Name: 
 

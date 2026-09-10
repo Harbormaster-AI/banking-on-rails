@@ -1,7 +1,7 @@
 require_relative 'lib/rubydemo/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'bankingOnRails'
+  spec.name          = 'bankingonrails'
   spec.version       = ''
   spec.authors       = [""]
   spec.email         = ["put_your_email_here@xyz.com"]

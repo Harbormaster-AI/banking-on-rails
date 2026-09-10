@@ -1,5 +1,5 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-# if you change the one: value, be sure to change its reference in the setup method of branch found in  bankingOnRails/test/controllers
+# if you change the one: value, be sure to change its reference in the setup method of branch found in  bankingonrails/test/controllers
 
 one:
   name: test string for name
