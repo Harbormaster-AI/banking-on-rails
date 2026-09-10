@@ -4,7 +4,7 @@ require "rails/all"
 
 Bundler.require(*Rails.groups)
 
-module Bankingonrails }
+module Bankingonrails
   class Application < Rails::Application
     config.load_defaults 8.1
 
