@@ -16,7 +16,7 @@
     "majorTechnology" : "RubyOnRails",
     "category": "backend_framework",
     "level": "basic",
-    "primaryVendor": "Ruby On Rails",
+    "primaryVendor": "Rails",
     "designPattern": "CQRS",
     "architectureStyle": "ModelViewController",
     "useCases": "SaaS Platform,Marketplace Application,E-Commerce Platform,Customer Portal,Content Management Platform",
@@ -25,7 +25,8 @@
     "languages": {
        "language": [
         {
-          "name": "ruby"
+          "name": "rails",
+          "version": "3.4.5"
         },
         {
           "name": "javascript"

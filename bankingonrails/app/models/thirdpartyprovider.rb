@@ -1,2 +1,0 @@
-class ThirdPartyProvider < ApplicationRecord
-end
