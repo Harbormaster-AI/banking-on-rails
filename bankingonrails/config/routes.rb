@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root "welcome#welcomeindex"
   root "application#health"
   resources :banks do
     resources :branches
