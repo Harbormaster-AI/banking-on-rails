@@ -10,11 +10,11 @@ module Bankingonrails
 
     config.autoload_lib(ignore: %w[assets tasks])
 
-    config.database_name     = 
-    config.database_username = 
-    config.database_password = 
-    config.database_host     = 
-    config.database_port     = 
+    config.database_name     = testDb
+    config.database_username = postgres
+    config.database_password = postgres
+    config.database_host     = localhost
+    config.database_port     = 5432
 
   end
 end
