@@ -2,150 +2,150 @@ Rails.application.routes.draw do
   root "welcome#welcomeindex"
   root "application#health"
   resources :banks do
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
+    resources :branches
+    resources :products
+    resources :customers
+    resources :accounts
+    resources :paymentcards
+    resources :loanaccounts
+    resources :exchangerates
+    resources :consents
+    resources :thirdpartyproviders
   end
   resources :branchs do
-    resource :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
+    resource :bank
+    resources :accounts
+    resources :loanaccounts
+    resources :atms
   end
   resources :atms do
-    resource :${roleName}
+    resource :branch
   end
   resources :customers do
-    resource :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
+    resource :bank
+    resources :accounts
+    resources :loanaccounts
+    resources :paymentcards
+    resources :externalaccounts
+    resources :fundstransfers
+    resources :disputes
+    resources :kycprofiles
+    resources :consents
   end
   resources :kycprofiles do
-    resource :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
+    resource :customer
+    resources :identitydocuments
+    resources :riskassessments
+    resources :screenings
   end
   resources :identitydocuments do
-    resource :${roleName}
+    resource :kycprofile
   end
   resources :riskassessments do
-    resource :${roleName}
+    resource :kycprofile
   end
   resources :screeningresults do
-    resource :${roleName}
+    resource :kycprofile
   end
   resources :bankingproducts do
-    resource :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
+    resource :bank
+    resources :accounts
+    resources :loanaccounts
+    resources :paymentcards
   end
   resources :accounts do
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
+    resource :bank
+    resource :branch
+    resource :product
+    resources :owners
+    resources :transactions
+    resources :statements
+    resources :standinginstructions
+    resources :feecharges
   end
   resources :accountstatements do
-    resource :${roleName}
+    resource :account
   end
   resources :transactions do
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
+    resource :account
+    resource :externalcounterparty
+    resource :paymentcard
+    resource :fundstransfer
+    resource :fxtrade
+    resource :dispute
   end
   resources :externalaccounts do
-    resource :${roleName}
-    resources :${roleName}
+    resource :customer
+    resources :transactions
   end
   resources :fundstransfers do
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resources :${roleName}
+    resource :sourceaccount
+    resource :destinationaccount
+    resource :externalbeneficiary
+    resource :initiatedby
+    resources :transactions
   end
   resources :standinginstructions do
-    resource :${roleName}
-    resource :${roleName}
+    resource :account
+    resource :beneficiary
   end
   resources :paymentcards do
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resources :${roleName}
+    resource :bank
+    resource :account
+    resource :customer
+    resources :transactions
   end
   resources :loanaccounts do
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
-    resources :${roleName}
+    resource :bank
+    resource :branch
+    resource :product
+    resources :borrowers
+    resources :repaymentschedule
+    resources :payments
+    resources :collateral
+    resources :feecharges
   end
   resources :repaymentschedules do
-    resource :${roleName}
-    resource :${roleName}
+    resource :loanaccount
+    resource :payment
   end
   resources :loanpayments do
-    resource :${roleName}
-    resource :${roleName}
+    resource :loanaccount
+    resource :transaction
   end
   resources :collaterals do
-    resource :${roleName}
+    resource :loanaccount
   end
   resources :feecharges do
-    resource :${roleName}
-    resource :${roleName}
+    resource :account
+    resource :loanaccount
   end
   resources :exchangerates do
-    resource :${roleName}
-    resources :${roleName}
+    resource :bank
+    resources :fxtrades
   end
   resources :fxtrades do
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
+    resource :customer
+    resource :bank
+    resource :exchangerate
+    resource :sourceaccount
+    resource :destinationaccount
+    resource :transaction
   end
   resources :disputes do
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
-    resource :${roleName}
+    resource :transaction
+    resource :customer
+    resource :account
+    resource :paymentcard
   end
   resources :consents do
-    resource :${roleName}
-    resource :${roleName}
-    resources :${roleName}
-    resource :${roleName}
+    resource :customer
+    resource :bank
+    resources :authorizedaccounts
+    resource :thirdpartyprovider
   end
   resources :thirdpartyproviders do
-    resource :${roleName}
-    resources :${roleName}
+    resource :bank
+    resources :consents
   end
 end
