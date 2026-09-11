@@ -40,6 +40,7 @@ class BranchsController < ApplicationController
     @branch.destroy
     redirect_to branchs_path
   end
+
  
   private
     def branch_params

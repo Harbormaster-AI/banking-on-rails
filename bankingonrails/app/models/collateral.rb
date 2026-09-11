@@ -18,5 +18,7 @@ class Collateral < ApplicationRecord
       ${$mapping}, 
       %w[address_country country]
     ]
+
   has_many :LoanAccount, class_name: 'LoanAccount'
+
 end

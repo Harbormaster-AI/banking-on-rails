@@ -9,8 +9,10 @@ class PaymentCard < ApplicationRecord
     mapping: [
       %w[cardPAN_value value]
     ]
+
   has_many :Bank, class_name: 'Bank'
   has_many :Account, class_name: 'Account'
   has_many :Customer, class_name: 'Customer'
   has_many :Transactions, class_name: 'Transaction'
+
 end

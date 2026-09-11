@@ -18,6 +18,8 @@ class ExternalAccount < ApplicationRecord
     mapping: [
       %w[bIC_value value]
     ]
+
   has_many :Customer, class_name: 'Customer'
   has_many :Transactions, class_name: 'Transaction'
+
 end

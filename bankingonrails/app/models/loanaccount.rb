@@ -24,6 +24,7 @@ class LoanAccount < ApplicationRecord
     mapping: [
       %w[percentage_value value]
     ]
+
   has_many :Bank, class_name: 'Bank'
   has_many :Branch, class_name: 'Branch'
   has_many :Product, class_name: 'BankingProduct'
@@ -32,4 +33,5 @@ class LoanAccount < ApplicationRecord
   has_many :Payments, class_name: 'LoanPayment'
   has_many :Collateral, class_name: 'Collateral'
   has_many :FeeCharges, class_name: 'FeeCharge'
+
 end

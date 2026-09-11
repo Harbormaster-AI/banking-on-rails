@@ -40,6 +40,7 @@ class CollateralsController < ApplicationController
     @collateral.destroy
     redirect_to collaterals_path
   end
+
  
   private
     def collateral_params

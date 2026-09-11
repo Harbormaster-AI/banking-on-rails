@@ -9,6 +9,8 @@ class StandingInstruction < ApplicationRecord
       ${$mapping}, 
       %w[money_currency currency]
     ]
+
   has_many :Account, class_name: 'Account'
   has_many :Beneficiary, class_name: 'ExternalAccount'
+
 end

@@ -15,6 +15,7 @@ class Account < ApplicationRecord
     mapping: [
       %w[iBAN_value value]
     ]
+
   has_many :Bank, class_name: 'Bank'
   has_many :Branch, class_name: 'Branch'
   has_many :Product, class_name: 'BankingProduct'
@@ -23,4 +24,5 @@ class Account < ApplicationRecord
   has_many :Statements, class_name: 'AccountStatement'
   has_many :StandingInstructions, class_name: 'StandingInstruction'
   has_many :FeeCharges, class_name: 'FeeCharge'
+
 end

@@ -40,6 +40,7 @@ class BanksController < ApplicationController
     @bank.destroy
     redirect_to banks_path
   end
+
  
   private
     def bank_params

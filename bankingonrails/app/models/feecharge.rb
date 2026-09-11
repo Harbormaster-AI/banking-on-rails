@@ -8,6 +8,8 @@ class FeeCharge < ApplicationRecord
       ${$mapping}, 
       %w[money_currency currency]
     ]
+
   has_many :Account, class_name: 'Account'
   has_many :LoanAccount, class_name: 'LoanAccount'
+
 end

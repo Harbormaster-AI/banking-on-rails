@@ -40,6 +40,7 @@ class ExchangeRatesController < ApplicationController
     @exchangeRate.destroy
     redirect_to exchangeRates_path
   end
+
  
   private
     def exchangeRate_params

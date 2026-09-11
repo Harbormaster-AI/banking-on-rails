@@ -40,6 +40,7 @@ class StandingInstructionsController < ApplicationController
     @standingInstruction.destroy
     redirect_to standingInstructions_path
   end
+
  
   private
     def standingInstruction_params

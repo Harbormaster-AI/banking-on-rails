@@ -40,6 +40,7 @@ class PaymentCardsController < ApplicationController
     @paymentCard.destroy
     redirect_to paymentCards_path
   end
+
  
   private
     def paymentCard_params

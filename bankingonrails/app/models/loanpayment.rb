@@ -9,6 +9,8 @@ class LoanPayment < ApplicationRecord
       ${$mapping}, 
       %w[money_currency currency]
     ]
+
   has_many :LoanAccount, class_name: 'LoanAccount'
   has_many :Transaction, class_name: 'Transaction'
+
 end

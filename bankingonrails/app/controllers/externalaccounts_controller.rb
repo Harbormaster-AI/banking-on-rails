@@ -40,6 +40,7 @@ class ExternalAccountsController < ApplicationController
     @externalAccount.destroy
     redirect_to externalAccounts_path
   end
+
  
   private
     def externalAccount_params

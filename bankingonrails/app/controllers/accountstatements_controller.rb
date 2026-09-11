@@ -40,6 +40,7 @@ class AccountStatementsController < ApplicationController
     @accountStatement.destroy
     redirect_to accountStatements_path
   end
+
  
   private
     def accountStatement_params

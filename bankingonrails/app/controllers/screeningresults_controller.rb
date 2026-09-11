@@ -40,6 +40,7 @@ class ScreeningResultsController < ApplicationController
     @screeningResult.destroy
     redirect_to screeningResults_path
   end
+
  
   private
     def screeningResult_params

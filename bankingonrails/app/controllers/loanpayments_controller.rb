@@ -40,6 +40,7 @@ class LoanPaymentsController < ApplicationController
     @loanPayment.destroy
     redirect_to loanPayments_path
   end
+
  
   private
     def loanPayment_params

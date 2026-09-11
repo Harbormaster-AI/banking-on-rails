@@ -40,6 +40,7 @@ class RiskAssessmentsController < ApplicationController
     @riskAssessment.destroy
     redirect_to riskAssessments_path
   end
+
  
   private
     def riskAssessment_params

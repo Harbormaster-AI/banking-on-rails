@@ -13,6 +13,7 @@ class Customer < ApplicationRecord
       ${$mapping}, 
       %w[address_country country]
     ]
+
   has_many :Bank, class_name: 'Bank'
   has_many :Accounts, class_name: 'Account'
   has_many :LoanAccounts, class_name: 'LoanAccount'
@@ -22,4 +23,5 @@ class Customer < ApplicationRecord
   has_many :Disputes, class_name: 'Dispute'
   has_many :KycProfiles, class_name: 'KycProfile'
   has_many :Consents, class_name: 'Consent'
+
 end

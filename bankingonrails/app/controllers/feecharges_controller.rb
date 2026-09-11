@@ -40,6 +40,7 @@ class FeeChargesController < ApplicationController
     @feeCharge.destroy
     redirect_to feeCharges_path
   end
+
  
   private
     def feeCharge_params

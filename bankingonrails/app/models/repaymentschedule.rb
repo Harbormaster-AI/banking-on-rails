@@ -22,6 +22,8 @@ class RepaymentSchedule < ApplicationRecord
       ${$mapping}, 
       %w[money_currency currency]
     ]
+
   has_many :LoanAccount, class_name: 'LoanAccount'
   has_many :Payment, class_name: 'LoanPayment'
+
 end

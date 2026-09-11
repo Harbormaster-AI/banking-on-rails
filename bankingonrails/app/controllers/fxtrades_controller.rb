@@ -40,6 +40,7 @@ class FXTradesController < ApplicationController
     @fXTrade.destroy
     redirect_to fXTrades_path
   end
+
  
   private
     def fXTrade_params

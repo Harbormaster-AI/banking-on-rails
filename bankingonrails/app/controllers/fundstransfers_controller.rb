@@ -40,6 +40,7 @@ class FundsTransfersController < ApplicationController
     @fundsTransfer.destroy
     redirect_to fundsTransfers_path
   end
+
  
   private
     def fundsTransfer_params

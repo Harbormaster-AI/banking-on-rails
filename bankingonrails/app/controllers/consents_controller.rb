@@ -40,6 +40,7 @@ class ConsentsController < ApplicationController
     @consent.destroy
     redirect_to consents_path
   end
+
  
   private
     def consent_params

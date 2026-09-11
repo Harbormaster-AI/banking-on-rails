@@ -16,9 +16,11 @@ class FundsTransfer < ApplicationRecord
       ${$mapping}, 
       %w[money_currency currency]
     ]
+
   has_many :SourceAccount, class_name: 'Account'
   has_many :DestinationAccount, class_name: 'Account'
   has_many :ExternalBeneficiary, class_name: 'ExternalAccount'
   has_many :InitiatedBy, class_name: 'Customer'
   has_many :Transactions, class_name: 'Transaction'
+
 end

@@ -40,6 +40,7 @@ class ThirdPartyProvidersController < ApplicationController
     @thirdPartyProvider.destroy
     redirect_to thirdPartyProviders_path
   end
+
  
   private
     def thirdPartyProvider_params

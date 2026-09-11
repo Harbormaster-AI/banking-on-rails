@@ -40,6 +40,7 @@ class RepaymentSchedulesController < ApplicationController
     @repaymentSchedule.destroy
     redirect_to repaymentSchedules_path
   end
+
  
   private
     def repaymentSchedule_params

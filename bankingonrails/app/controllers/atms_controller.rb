@@ -40,6 +40,7 @@ class ATMsController < ApplicationController
     @aTM.destroy
     redirect_to aTMs_path
   end
+
  
   private
     def aTM_params

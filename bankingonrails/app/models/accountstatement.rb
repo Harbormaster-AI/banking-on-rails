@@ -15,5 +15,7 @@ class AccountStatement < ApplicationRecord
       ${$mapping}, 
       %w[money_currency currency]
     ]
+
   has_many :Account, class_name: 'Account'
+
 end

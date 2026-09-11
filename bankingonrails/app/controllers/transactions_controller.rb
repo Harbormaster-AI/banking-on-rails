@@ -40,6 +40,7 @@ class TransactionsController < ApplicationController
     @transaction.destroy
     redirect_to transactions_path
   end
+
  
   private
     def transaction_params

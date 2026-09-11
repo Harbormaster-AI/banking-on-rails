@@ -40,6 +40,7 @@ class KycProfilesController < ApplicationController
     @kycProfile.destroy
     redirect_to kycProfiles_path
   end
+
  
   private
     def kycProfile_params

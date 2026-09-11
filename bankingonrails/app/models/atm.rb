@@ -11,5 +11,7 @@ class ATM < ApplicationRecord
       ${$mapping}, 
       %w[address_country country]
     ]
+
   has_many :Branch, class_name: 'Branch'
+
 end

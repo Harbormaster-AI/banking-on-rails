@@ -11,10 +11,12 @@ class Transaction < ApplicationRecord
       ${$mapping}, 
       %w[money_currency currency]
     ]
+
   has_many :Account, class_name: 'Account'
   has_many :ExternalCounterparty, class_name: 'ExternalAccount'
   has_many :PaymentCard, class_name: 'PaymentCard'
   has_many :FundsTransfer, class_name: 'FundsTransfer'
   has_many :FxTrade, class_name: 'FXTrade'
   has_many :Dispute, class_name: 'Dispute'
+
 end

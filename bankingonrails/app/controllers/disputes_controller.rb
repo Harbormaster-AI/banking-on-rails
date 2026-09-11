@@ -40,6 +40,7 @@ class DisputesController < ApplicationController
     @dispute.destroy
     redirect_to disputes_path
   end
+
  
   private
     def dispute_params

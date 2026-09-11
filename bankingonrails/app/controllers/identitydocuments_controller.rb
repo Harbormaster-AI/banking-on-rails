@@ -40,6 +40,7 @@ class IdentityDocumentsController < ApplicationController
     @identityDocument.destroy
     redirect_to identityDocuments_path
   end
+
  
   private
     def identityDocument_params
