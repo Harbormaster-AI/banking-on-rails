@@ -14,4 +14,17 @@ COPY . .
 
 EXPOSE 5432
 
+RUN echo "=== BUNDLE CONFIG ===" \
+    && cat .bundle/config \
+    && echo "=== VENDOR BUNDLE ===" \
+    && ls -la vendor/bundle/ruby/3.4.0 \
+    && echo "=== RAILS GEM ===" \
+    && ls -d vendor/bundle/ruby/3.4.0/gems/rails-* \
+    && echo "=== RUBY ===" \
+    && ruby --version \
+    && echo "=== GEM HOME ===" \
+    && gem env home \
+    && echo "=== BUNDLE PATH ===" \
+    && bundle config get path
+
 CMD ["ruby", "bin/rails", "server", "--binding=0.0.0.0"]
