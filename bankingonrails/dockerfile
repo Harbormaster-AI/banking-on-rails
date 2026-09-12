@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 5432
 
-CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
+CMD ["ruby", "bin/rails", "server", "--binding=0.0.0.0"]
