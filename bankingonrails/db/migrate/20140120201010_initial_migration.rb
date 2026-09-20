@@ -171,6 +171,7 @@ class InitialMigration < ActiveRecord::Migration[6.1]
       t.timestamps
     end
     create_table :collaterals do |t|
+      t.string :collateralIdentifier      
       t.string :appraisedValue      
       t.string :description      
       t.string :location      

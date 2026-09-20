@@ -110,4 +110,12 @@ CollateralType
 - Repository: banking-on-rails
 - Tag: latest
 
+## AWS
+- accessKey: xxxxxxxxxxxxxxxx
+- secretKey: xxxxxxxxxxxxxxxx
+- region: us-east-2
+- ec2InstanceType: 
+- dbInstanceType: 
+- vpc: xxxxxxxxxxxxxxx
+- AMI Image Id: 
 

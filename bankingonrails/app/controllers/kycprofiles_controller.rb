@@ -1,3 +1,4 @@
+
 class KycProfilesController < ApplicationController
   def index
     @kycProfiles = KycProfile.all

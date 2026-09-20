@@ -1,3 +1,4 @@
+
 class Bank < ApplicationRecord
 
 

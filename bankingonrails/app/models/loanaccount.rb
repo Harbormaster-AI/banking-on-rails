@@ -1,3 +1,4 @@
+
 class LoanAccount < ApplicationRecord
   enum LoanType: [:Mortgage, :Personal, :Auto, :SmallBusiness, :CreditLine, :Student]
   enum RateType: [:Fixed, :Variable]

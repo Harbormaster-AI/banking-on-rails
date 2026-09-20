@@ -1,3 +1,4 @@
+
 class ScreeningResultsController < ApplicationController
   def index
     @screeningResults = ScreeningResult.all

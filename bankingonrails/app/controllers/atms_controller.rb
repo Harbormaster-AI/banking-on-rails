@@ -1,3 +1,4 @@
+
 class ATMsController < ApplicationController
   def index
     @aTMs = ATM.all

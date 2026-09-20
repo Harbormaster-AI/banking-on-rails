@@ -1,3 +1,4 @@
+
 class ThirdPartyProvidersController < ApplicationController
   def index
     @thirdPartyProviders = ThirdPartyProvider.all

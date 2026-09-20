@@ -1,3 +1,4 @@
+
 class BankingProductsController < ApplicationController
   def index
     @bankingProducts = BankingProduct.all

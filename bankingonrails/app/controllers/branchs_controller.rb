@@ -1,3 +1,4 @@
+
 class BranchsController < ApplicationController
   def index
     @branchs = Branch.all

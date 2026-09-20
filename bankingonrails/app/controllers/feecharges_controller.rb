@@ -1,3 +1,4 @@
+
 class FeeChargesController < ApplicationController
   def index
     @feeCharges = FeeCharge.all

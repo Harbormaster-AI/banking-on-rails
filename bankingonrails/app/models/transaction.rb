@@ -1,3 +1,4 @@
+
 class Transaction < ApplicationRecord
   enum Direction: [:Credit, :Debit]
   enum TransactionType: [:Deposit, :Withdrawal, :Transfer, :Payment, :Fee, :Interest, :Adjustment, :Chargeback, :Refund, :FXConversion]

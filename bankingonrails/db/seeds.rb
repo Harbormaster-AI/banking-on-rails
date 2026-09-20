@@ -27,7 +27,7 @@
   LoanAccount.create( loanNumber:"test string for loanNumber", principalAmount:"test value", outstandingPrincipal:"test value", interestRate:"test value", originationDate:1.week.ago, maturityDate:1.week.ago, paymentDayOfMonth:100, currency:"test string for currency", LoanType:0, RateType:0, Compounding:0, Status:0 )
   RepaymentSchedule.create( installmentNumber:100, dueDate:1.week.ago, principalDue:"test value", interestDue:"test value", totalDue:"test value", Status:0 )
   LoanPayment.create( paymentReference:"test string for paymentReference", amount:"test value", paymentDate:1.week.ago, Method:0, Status:0 )
-  Collateral.create( appraisedValue:"test value", description:"test string for description", location:"test value", CollateralType:0 )
+  Collateral.create( collateralIdentifier:"test string for collateralIdentifier", appraisedValue:"test value", description:"test string for description", location:"test value", CollateralType:0 )
   FeeCharge.create( feeCode:"test string for feeCode", amount:"test value", appliedOn:1.week.ago, FeeType:0 )
   ExchangeRate.create( baseCurrency:"test string for baseCurrency", counterCurrency:"test string for counterCurrency", rate:"test value", asOf:1.week.ago, source:"test string for source" )
   FXTrade.create( tradeReference:"test string for tradeReference", tradeDate:1.week.ago, settlementDate:1.week.ago, amountSold:"test value", amountBought:"test value", rate:"test value", Status:0 )

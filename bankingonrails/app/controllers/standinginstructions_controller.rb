@@ -1,3 +1,4 @@
+
 class StandingInstructionsController < ApplicationController
   def index
     @standingInstructions = StandingInstruction.all

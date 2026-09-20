@@ -1,3 +1,4 @@
+
 class ThirdPartyProvider < ApplicationRecord
 
 

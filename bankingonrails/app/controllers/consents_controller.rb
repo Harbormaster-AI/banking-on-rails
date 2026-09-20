@@ -1,3 +1,4 @@
+
 class ConsentsController < ApplicationController
   def index
     @consents = Consent.all

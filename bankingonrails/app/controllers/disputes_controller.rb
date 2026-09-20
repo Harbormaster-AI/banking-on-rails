@@ -1,3 +1,4 @@
+
 class DisputesController < ApplicationController
   def index
     @disputes = Dispute.all

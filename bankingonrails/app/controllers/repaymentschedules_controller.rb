@@ -1,3 +1,4 @@
+
 class RepaymentSchedulesController < ApplicationController
   def index
     @repaymentSchedules = RepaymentSchedule.all

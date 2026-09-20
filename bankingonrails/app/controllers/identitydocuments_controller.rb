@@ -1,3 +1,4 @@
+
 class IdentityDocumentsController < ApplicationController
   def index
     @identityDocuments = IdentityDocument.all

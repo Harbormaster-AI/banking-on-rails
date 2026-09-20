@@ -5,6 +5,8 @@
 <table class="table table-sm table-hover table-striped"">
 	<thead class="table-dark">
 		<tr>
+
+			<th style="text-align:center">collateralIdentifier</th>
 			<th style="text-align:center">appraisedValue</th>
 			<th style="text-align:center">description</th>
 			<th style="text-align:center">location</th>
@@ -15,6 +17,9 @@
  
   <% @collaterals.each do |collateral| %>
 		<tr>   
+			<td style="text-align:center">
+	  			<%= collateral.collateralIdentifier %>
+			</td>
 			<td style="text-align:center">
 	  			<%= collateral.appraisedValue %>
 			</td>

@@ -1,3 +1,4 @@
+
 class ExternalAccountsController < ApplicationController
   def index
     @externalAccounts = ExternalAccount.all

@@ -1,3 +1,4 @@
+
 class ExchangeRatesController < ApplicationController
   def index
     @exchangeRates = ExchangeRate.all

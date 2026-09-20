@@ -1,3 +1,4 @@
+
 class FundsTransfersController < ApplicationController
   def index
     @fundsTransfers = FundsTransfer.all

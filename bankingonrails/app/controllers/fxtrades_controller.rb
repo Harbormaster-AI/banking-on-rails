@@ -1,3 +1,4 @@
+
 class FXTradesController < ApplicationController
   def index
     @fXTrades = FXTrade.all

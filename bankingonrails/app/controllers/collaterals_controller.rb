@@ -1,3 +1,4 @@
+
 class CollateralsController < ApplicationController
   def index
     @collaterals = Collateral.all
@@ -44,6 +45,6 @@ class CollateralsController < ApplicationController
  
   private
     def collateral_params
-      params.require(:collateral).permit(:appraisedValue, :description, :location, :CollateralType)
+      params.require(:collateral).permit(:collateralIdentifier, :appraisedValue, :description, :location, :CollateralType)
     end
 end

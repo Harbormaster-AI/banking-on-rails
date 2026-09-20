@@ -1,3 +1,4 @@
+
 class LoanPaymentsController < ApplicationController
   def index
     @loanPayments = LoanPayment.all

@@ -1,3 +1,4 @@
+
 class PaymentCardsController < ApplicationController
   def index
     @paymentCards = PaymentCard.all

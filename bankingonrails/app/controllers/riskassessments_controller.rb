@@ -1,3 +1,4 @@
+
 class RiskAssessmentsController < ApplicationController
   def index
     @riskAssessments = RiskAssessment.all

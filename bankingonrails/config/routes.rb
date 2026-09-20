@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "application#health"
+
   resources :banks do
+
     resources :branches
     resources :products
     resources :customers
@@ -12,15 +14,18 @@ Rails.application.routes.draw do
     resources :thirdpartyproviders
   end
   resources :branchs do
+
     resource :bank
     resources :accounts
     resources :loanaccounts
     resources :atms
   end
   resources :atms do
+
     resource :branch
   end
   resources :customers do
+
     resource :bank
     resources :accounts
     resources :loanaccounts
@@ -32,27 +37,33 @@ Rails.application.routes.draw do
     resources :consents
   end
   resources :kycprofiles do
+
     resource :customer
     resources :identitydocuments
     resources :riskassessments
     resources :screenings
   end
   resources :identitydocuments do
+
     resource :kycprofile
   end
   resources :riskassessments do
+
     resource :kycprofile
   end
   resources :screeningresults do
+
     resource :kycprofile
   end
   resources :bankingproducts do
+
     resource :bank
     resources :accounts
     resources :loanaccounts
     resources :paymentcards
   end
   resources :accounts do
+
     resource :bank
     resource :branch
     resource :product
@@ -63,9 +74,11 @@ Rails.application.routes.draw do
     resources :feecharges
   end
   resources :accountstatements do
+
     resource :account
   end
   resources :transactions do
+
     resource :account
     resource :externalcounterparty
     resource :paymentcard
@@ -74,10 +87,12 @@ Rails.application.routes.draw do
     resource :dispute
   end
   resources :externalaccounts do
+
     resource :customer
     resources :transactions
   end
   resources :fundstransfers do
+
     resource :sourceaccount
     resource :destinationaccount
     resource :externalbeneficiary
@@ -85,16 +100,19 @@ Rails.application.routes.draw do
     resources :transactions
   end
   resources :standinginstructions do
+
     resource :account
     resource :beneficiary
   end
   resources :paymentcards do
+
     resource :bank
     resource :account
     resource :customer
     resources :transactions
   end
   resources :loanaccounts do
+
     resource :bank
     resource :branch
     resource :product
@@ -105,25 +123,31 @@ Rails.application.routes.draw do
     resources :feecharges
   end
   resources :repaymentschedules do
+
     resource :loanaccount
     resource :payment
   end
   resources :loanpayments do
+
     resource :loanaccount
     resource :transaction
   end
   resources :collaterals do
+
     resource :loanaccount
   end
   resources :feecharges do
+
     resource :account
     resource :loanaccount
   end
   resources :exchangerates do
+
     resource :bank
     resources :fxtrades
   end
   resources :fxtrades do
+
     resource :customer
     resource :bank
     resource :exchangerate
@@ -132,18 +156,21 @@ Rails.application.routes.draw do
     resource :transaction
   end
   resources :disputes do
+
     resource :transaction
     resource :customer
     resource :account
     resource :paymentcard
   end
   resources :consents do
+
     resource :customer
     resource :bank
     resources :authorizedaccounts
     resource :thirdpartyprovider
   end
   resources :thirdpartyproviders do
+
     resource :bank
     resources :consents
   end
