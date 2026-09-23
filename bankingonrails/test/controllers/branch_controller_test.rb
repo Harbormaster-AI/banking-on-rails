@@ -15,8 +15,7 @@ class BranchControllerTest < ActionDispatch::IntegrationTest
   test "should create branch" do
     assert_difference("Branch.count") do
       post branchs_url, params: { branch: {
-                        openingHours:"test string for openingHours"
- } }
+        opening_hours:"test string for openingHours" } }
     end
 
     assert_redirected_to branchs_url

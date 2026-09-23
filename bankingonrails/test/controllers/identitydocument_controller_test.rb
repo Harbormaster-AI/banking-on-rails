@@ -15,8 +15,7 @@ class IdentityDocumentControllerTest < ActionDispatch::IntegrationTest
   test "should create identity_document" do
     assert_difference("IdentityDocument.count") do
       post identity_documents_url, params: { identity_document: {
-                        DocumentType:IdentityDocument.DocumentTypes[0]
- } }
+        document_type:IdentityDocument.DocumentTypes[0] } }
     end
 
     assert_redirected_to identity_documents_url

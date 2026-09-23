@@ -8,56 +8,30 @@
 
 
 5.times do |i|
-  Bank.create(                 website:"test string for website"
- )
-  Branch.create(                 openingHours:"test string for openingHours"
- )
-  ATM.create(                 Status:0
- )
-  Customer.create(                 KycStatus:0
- )
-  KycProfile.create(                 Status:0
- )
-  IdentityDocument.create(                 DocumentType:0
- )
-  RiskAssessment.create(                 Rating:0
- )
-  ScreeningResult.create(                 Outcome:0
- )
-  BankingProduct.create(                 ProductCategory:0
- )
-  Account.create(                 Status:0
- )
-  AccountStatement.create(                 DeliveryMethod:0
- )
-  Transaction.create(                 Channel:0
- )
-  ExternalAccount.create(                 country:"test string for country"
- )
-  FundsTransfer.create(                 Status:0
- )
-  StandingInstruction.create(                 Status:0
- )
-  PaymentCard.create(                 Network:0
- )
-  LoanAccount.create(                 Status:0
- )
-  RepaymentSchedule.create(                 Status:0
- )
-  LoanPayment.create(                 Status:0
- )
-  Collateral.create(                 CollateralType:0
- )
-  FeeCharge.create(                 FeeType:0
- )
-  ExchangeRate.create(                 source:"test string for source"
- )
-  FXTrade.create(                 Status:0
- )
-  Dispute.create(                 Status:0
- )
-  Consent.create(                 Status:0
- )
-  ThirdPartyProvider.create(                 website:"test string for website"
- )
+  Bank.create( website:"test string for website" )
+  Branch.create( opening_hours:"test string for openingHours" )
+  ATM.create( status:0 )
+  Customer.create( kyc_status:0 )
+  KycProfile.create( status:0 )
+  IdentityDocument.create( document_type:0 )
+  RiskAssessment.create( rating:0 )
+  ScreeningResult.create( outcome:0 )
+  BankingProduct.create( product_category:0 )
+  Account.create( status:0 )
+  AccountStatement.create( delivery_method:0 )
+  Transaction.create( channel:0 )
+  ExternalAccount.create( country:"test string for country" )
+  FundsTransfer.create( status:0 )
+  StandingInstruction.create( status:0 )
+  PaymentCard.create( network:0 )
+  LoanAccount.create( status:0 )
+  RepaymentSchedule.create( status:0 )
+  LoanPayment.create( status:0 )
+  Collateral.create( collateral_type:0 )
+  FeeCharge.create( fee_type:0 )
+  ExchangeRate.create( source:"test string for source" )
+  FXTrade.create( status:0 )
+  Dispute.create( status:0 )
+  Consent.create( status:0 )
+  ThirdPartyProvider.create( website:"test string for website" )
 end

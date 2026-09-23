@@ -15,8 +15,7 @@ class TransactionControllerTest < ActionDispatch::IntegrationTest
   test "should create transaction" do
     assert_difference("Transaction.count") do
       post transactions_url, params: { transaction: {
-                        Channel:Transaction.Channels[0]
- } }
+        channel:Transaction.Channels[0] } }
     end
 
     assert_redirected_to transactions_url

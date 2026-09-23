@@ -15,8 +15,7 @@ class ATMControllerTest < ActionDispatch::IntegrationTest
   test "should create a_t_m" do
     assert_difference("ATM.count") do
       post a_t_ms_url, params: { a_t_m: {
-                        Status:ATM.Statuss[0]
- } }
+        status:ATM.Statuss[0] } }
     end
 
     assert_redirected_to a_t_ms_url

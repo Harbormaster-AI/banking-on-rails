@@ -15,8 +15,7 @@ class AccountStatementControllerTest < ActionDispatch::IntegrationTest
   test "should create account_statement" do
     assert_difference("AccountStatement.count") do
       post account_statements_url, params: { account_statement: {
-                        DeliveryMethod:AccountStatement.DeliveryMethods[0]
- } }
+        delivery_method:AccountStatement.DeliveryMethods[0] } }
     end
 
     assert_redirected_to account_statements_url

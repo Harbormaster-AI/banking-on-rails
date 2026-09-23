@@ -15,8 +15,7 @@ class LoanAccountControllerTest < ActionDispatch::IntegrationTest
   test "should create loan_account" do
     assert_difference("LoanAccount.count") do
       post loan_accounts_url, params: { loan_account: {
-                        Status:LoanAccount.Statuss[0]
- } }
+        status:LoanAccount.Statuss[0] } }
     end
 
     assert_redirected_to loan_accounts_url

@@ -15,8 +15,7 @@ class BankControllerTest < ActionDispatch::IntegrationTest
   test "should create bank" do
     assert_difference("Bank.count") do
       post banks_url, params: { bank: {
-                        website:"test string for website"
- } }
+        website:"test string for website" } }
     end
 
     assert_redirected_to banks_url
