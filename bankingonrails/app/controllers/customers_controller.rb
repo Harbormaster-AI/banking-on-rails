@@ -1,50 +1,50 @@
 class CustomersController < ApplicationController
   def index
-    @_customers = Customer.all
+    @customers = Customer.all
   end
  
   def find
-    @_customer = Customer.find(params[:id])
+    @customer = Customer.find(params[:id])
   end
  
   def new
-    @_customer = Customer.new
+    @customer = Customer.new
   end
  
   def edit
-    @_customer = Customer.find(params[:id])
+    @customer = Customer.find(params[:id])
   end
  
   def create
-    @_customer = Customer.new(_customer_params)
+    @customer = Customer.new(customer_params)
  
-    if @_customer.save
-      redirect_to _customers_path
+    if @customer.save
+      redirect_to customers_path
     else
       render 'new'
     end
   end
  
   def update
-    @_customer = Customer.find(params[:id])
+    @customer = Customer.find(params[:id])
  
-    if @_customer.update(_customer_params)
-      redirect_to _customers_path
+    if @customer.update(customer_params)
+      redirect_to customers_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @_customer = Customer.find(params[:id])
-    @_customer.destroy
-    redirect_to _customers_path
+    @customer = Customer.find(params[:id])
+    @customer.destroy
+    redirect_to customers_path
   end
 
  
   private
-    def _customer_params
-      params.require(:_customer).permit(
+    def customer_params
+      params.require(:customer).permit(
         :first_name,
         :last_name,
         :legal_name,
@@ -53,8 +53,8 @@ class CustomersController < ApplicationController
         :email,
         :phone,
         :address,
-        :_customer_type,
-        :_risk_rating,
-        :_kyc_status
+        :customer_type,
+        :risk_rating,
+        :kyc_status
       )
 

@@ -1,57 +1,57 @@
 class TransactionsController < ApplicationController
   def index
-    @_transactions = Transaction.all
+    @transactions = Transaction.all
   end
  
   def find
-    @_transaction = Transaction.find(params[:id])
+    @transaction = Transaction.find(params[:id])
   end
  
   def new
-    @_transaction = Transaction.new
+    @transaction = Transaction.new
   end
  
   def edit
-    @_transaction = Transaction.find(params[:id])
+    @transaction = Transaction.find(params[:id])
   end
  
   def create
-    @_transaction = Transaction.new(_transaction_params)
+    @transaction = Transaction.new(transaction_params)
  
-    if @_transaction.save
-      redirect_to _transactions_path
+    if @transaction.save
+      redirect_to transactions_path
     else
       render 'new'
     end
   end
  
   def update
-    @_transaction = Transaction.find(params[:id])
+    @transaction = Transaction.find(params[:id])
  
-    if @_transaction.update(_transaction_params)
-      redirect_to _transactions_path
+    if @transaction.update(transaction_params)
+      redirect_to transactions_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @_transaction = Transaction.find(params[:id])
-    @_transaction.destroy
-    redirect_to _transactions_path
+    @transaction = Transaction.find(params[:id])
+    @transaction.destroy
+    redirect_to transactions_path
   end
 
  
   private
-    def _transaction_params
-      params.require(:_transaction).permit(
+    def transaction_params
+      params.require(:transaction).permit(
         :booking_date,
         :value_date,
         :amount,
         :description,
-        :_direction,
-        :_transaction_type,
-        :_status,
-        :_channel
+        :direction,
+        :transaction_type,
+        :status,
+        :channel
       )
 

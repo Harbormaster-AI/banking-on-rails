@@ -3,7 +3,7 @@ require "test_helper"
 class FeeChargeControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @_fee_charge = _fee_charges(:one)
+    @fee_charge = fee_charges(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class FeeChargeControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create _fee_charge" do
+  test "should create fee_charge" do
     assert_difference("FeeCharge.count") do
-      post _fee_charges_url, params: { _fee_charge: {
+      post fee_charges_url, params: { fee_charge: {
                         FeeType:FeeCharge.FeeTypes[0]
  } }
     end
 
-    assert_redirected_to _fee_charges_url
+    assert_redirected_to fee_charges_url
   end
 
  
   
-  test "should destroy _fee_charge" do
+  test "should destroy fee_charge" do
     assert_difference("FeeCharge.count", -1) do
-      delete _fee_charge_url(@_fee_charge)
+      delete fee_charge_url(@fee_charge)
     end
 
-    assert_redirected_to _fee_charges_url
+    assert_redirected_to fee_charges_url
   end
   
 end

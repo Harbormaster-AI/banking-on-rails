@@ -1,50 +1,50 @@
 class LoanAccountsController < ApplicationController
   def index
-    @_loan_accounts = LoanAccount.all
+    @loan_accounts = LoanAccount.all
   end
  
   def find
-    @_loan_account = LoanAccount.find(params[:id])
+    @loan_account = LoanAccount.find(params[:id])
   end
  
   def new
-    @_loan_account = LoanAccount.new
+    @loan_account = LoanAccount.new
   end
  
   def edit
-    @_loan_account = LoanAccount.find(params[:id])
+    @loan_account = LoanAccount.find(params[:id])
   end
  
   def create
-    @_loan_account = LoanAccount.new(_loan_account_params)
+    @loan_account = LoanAccount.new(loan_account_params)
  
-    if @_loan_account.save
-      redirect_to _loan_accounts_path
+    if @loan_account.save
+      redirect_to loan_accounts_path
     else
       render 'new'
     end
   end
  
   def update
-    @_loan_account = LoanAccount.find(params[:id])
+    @loan_account = LoanAccount.find(params[:id])
  
-    if @_loan_account.update(_loan_account_params)
-      redirect_to _loan_accounts_path
+    if @loan_account.update(loan_account_params)
+      redirect_to loan_accounts_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @_loan_account = LoanAccount.find(params[:id])
-    @_loan_account.destroy
-    redirect_to _loan_accounts_path
+    @loan_account = LoanAccount.find(params[:id])
+    @loan_account.destroy
+    redirect_to loan_accounts_path
   end
 
  
   private
-    def _loan_account_params
-      params.require(:_loan_account).permit(
+    def loan_account_params
+      params.require(:loan_account).permit(
         :loan_number,
         :principal_amount,
         :outstanding_principal,
@@ -53,9 +53,9 @@ class LoanAccountsController < ApplicationController
         :maturity_date,
         :payment_day_of_month,
         :currency,
-        :_loan_type,
-        :_rate_type,
-        :_compounding,
-        :_status
+        :loan_type,
+        :rate_type,
+        :compounding,
+        :status
       )
 

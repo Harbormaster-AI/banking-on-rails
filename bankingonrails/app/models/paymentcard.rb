@@ -1,13 +1,13 @@
 class PaymentCard < ApplicationRecord
-  enum _CARD_TYPE: [:Debit, :Credit, :Prepaid, :Virtual]
-  enum _CARD_STATUS: [:Active, :Blocked, :LostStolen, :Expired, :Closed]
-  enum _NETWORK: [:Visa, :Mastercard, :Amex, :Discover, :UnionPay, :Other]
+  enum CARD_TYPE: [:Debit, :Credit, :Prepaid, :Virtual]
+  enum CARD_STATUS: [:Active, :Blocked, :LostStolen, :Expired, :Closed]
+  enum NETWORK: [:Visa, :Mastercard, :Amex, :Discover, :UnionPay, :Other]
 
 
-  composed_of :_card_p_a_n,
+  composed_of :card_p_a_n,
     class_name: "CardPAN",
     mapping: [
-      %w[_card_p_a_n_value value]
+      %w[card_p_a_n_value value]
     ]
 
   has_many :Bank, class_name: 'Bank'

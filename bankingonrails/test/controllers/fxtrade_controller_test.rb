@@ -3,7 +3,7 @@ require "test_helper"
 class FXTradeControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @_f_x_trade = _f_x_trades(:one)
+    @f_x_trade = f_x_trades(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class FXTradeControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create _f_x_trade" do
+  test "should create f_x_trade" do
     assert_difference("FXTrade.count") do
-      post _f_x_trades_url, params: { _f_x_trade: {
+      post f_x_trades_url, params: { f_x_trade: {
                         Status:FXTrade.Statuss[0]
  } }
     end
 
-    assert_redirected_to _f_x_trades_url
+    assert_redirected_to f_x_trades_url
   end
 
  
   
-  test "should destroy _f_x_trade" do
+  test "should destroy f_x_trade" do
     assert_difference("FXTrade.count", -1) do
-      delete _f_x_trade_url(@_f_x_trade)
+      delete f_x_trade_url(@f_x_trade)
     end
 
-    assert_redirected_to _f_x_trades_url
+    assert_redirected_to f_x_trades_url
   end
   
 end

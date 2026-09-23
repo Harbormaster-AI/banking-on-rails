@@ -3,7 +3,7 @@ require "test_helper"
 class LoanAccountControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @_loan_account = _loan_accounts(:one)
+    @loan_account = loan_accounts(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class LoanAccountControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create _loan_account" do
+  test "should create loan_account" do
     assert_difference("LoanAccount.count") do
-      post _loan_accounts_url, params: { _loan_account: {
+      post loan_accounts_url, params: { loan_account: {
                         Status:LoanAccount.Statuss[0]
  } }
     end
 
-    assert_redirected_to _loan_accounts_url
+    assert_redirected_to loan_accounts_url
   end
 
  
   
-  test "should destroy _loan_account" do
+  test "should destroy loan_account" do
     assert_difference("LoanAccount.count", -1) do
-      delete _loan_account_url(@_loan_account)
+      delete loan_account_url(@loan_account)
     end
 
-    assert_redirected_to _loan_accounts_url
+    assert_redirected_to loan_accounts_url
   end
   
 end

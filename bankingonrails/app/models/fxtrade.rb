@@ -1,19 +1,19 @@
 class FXTrade < ApplicationRecord
-  enum _STATUS: [:Booked, :Settled, :Cancelled]
+  enum STATUS: [:Booked, :Settled, :Cancelled]
 
 
-  composed_of :_money,
+  composed_of :money,
     class_name: "Money",
     mapping: [
-      %w[_money_amount amount], 
-      %w[_money_currency currency]
+      %w[money_amount amount], 
+      %w[money_currency currency]
     ]
 
-  composed_of :_money,
+  composed_of :money,
     class_name: "Money",
     mapping: [
-      %w[_money_amount amount], 
-      %w[_money_currency currency]
+      %w[money_amount amount], 
+      %w[money_currency currency]
     ]
 
   has_many :Customer, class_name: 'Customer'

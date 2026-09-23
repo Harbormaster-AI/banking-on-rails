@@ -3,7 +3,7 @@ require "test_helper"
 class CustomerControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @_customer = _customers(:one)
+    @customer = customers(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class CustomerControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create _customer" do
+  test "should create customer" do
     assert_difference("Customer.count") do
-      post _customers_url, params: { _customer: {
+      post customers_url, params: { customer: {
                         KycStatus:Customer.KycStatuss[0]
  } }
     end
 
-    assert_redirected_to _customers_url
+    assert_redirected_to customers_url
   end
 
  
   
-  test "should destroy _customer" do
+  test "should destroy customer" do
     assert_difference("Customer.count", -1) do
-      delete _customer_url(@_customer)
+      delete customer_url(@customer)
     end
 
-    assert_redirected_to _customers_url
+    assert_redirected_to customers_url
   end
   
 end

@@ -1,53 +1,53 @@
 class DisputesController < ApplicationController
   def index
-    @_disputes = Dispute.all
+    @disputes = Dispute.all
   end
  
   def find
-    @_dispute = Dispute.find(params[:id])
+    @dispute = Dispute.find(params[:id])
   end
  
   def new
-    @_dispute = Dispute.new
+    @dispute = Dispute.new
   end
  
   def edit
-    @_dispute = Dispute.find(params[:id])
+    @dispute = Dispute.find(params[:id])
   end
  
   def create
-    @_dispute = Dispute.new(_dispute_params)
+    @dispute = Dispute.new(dispute_params)
  
-    if @_dispute.save
-      redirect_to _disputes_path
+    if @dispute.save
+      redirect_to disputes_path
     else
       render 'new'
     end
   end
  
   def update
-    @_dispute = Dispute.find(params[:id])
+    @dispute = Dispute.find(params[:id])
  
-    if @_dispute.update(_dispute_params)
-      redirect_to _disputes_path
+    if @dispute.update(dispute_params)
+      redirect_to disputes_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @_dispute = Dispute.find(params[:id])
-    @_dispute.destroy
-    redirect_to _disputes_path
+    @dispute = Dispute.find(params[:id])
+    @dispute.destroy
+    redirect_to disputes_path
   end
 
  
   private
-    def _dispute_params
-      params.require(:_dispute).permit(
+    def dispute_params
+      params.require(:dispute).permit(
         :dispute_reference,
         :raised_on,
         :reason,
-        :_status
+        :status
       )
 

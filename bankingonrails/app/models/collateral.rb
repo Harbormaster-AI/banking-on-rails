@@ -1,22 +1,22 @@
 class Collateral < ApplicationRecord
-  enum _COLLATERAL_TYPE: [:RealEstate, :Vehicle, :Cash, :Securities, :Guarantee, :Equipment]
+  enum COLLATERAL_TYPE: [:RealEstate, :Vehicle, :Cash, :Securities, :Guarantee, :Equipment]
 
 
-  composed_of :_money,
+  composed_of :money,
     class_name: "Money",
     mapping: [
-      %w[_money_amount amount], 
-      %w[_money_currency currency]
+      %w[money_amount amount], 
+      %w[money_currency currency]
     ]
 
-  composed_of :_address,
+  composed_of :address,
     class_name: "Address",
     mapping: [
-      %w[_address_street street], 
-      %w[_address_city city], 
-      %w[_address_state state], 
-      %w[_address_postal_code postal_code], 
-      %w[_address_country country]
+      %w[address_street street], 
+      %w[address_city city], 
+      %w[address_state state], 
+      %w[address_postal_code postal_code], 
+      %w[address_country country]
     ]
 
   has_many :LoanAccount, class_name: 'LoanAccount'

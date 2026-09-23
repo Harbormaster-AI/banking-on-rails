@@ -1,58 +1,58 @@
 class AccountsController < ApplicationController
   def index
-    @_accounts = Account.all
+    @accounts = Account.all
   end
  
   def find
-    @_account = Account.find(params[:id])
+    @account = Account.find(params[:id])
   end
  
   def new
-    @_account = Account.new
+    @account = Account.new
   end
  
   def edit
-    @_account = Account.find(params[:id])
+    @account = Account.find(params[:id])
   end
  
   def create
-    @_account = Account.new(_account_params)
+    @account = Account.new(account_params)
  
-    if @_account.save
-      redirect_to _accounts_path
+    if @account.save
+      redirect_to accounts_path
     else
       render 'new'
     end
   end
  
   def update
-    @_account = Account.find(params[:id])
+    @account = Account.find(params[:id])
  
-    if @_account.update(_account_params)
-      redirect_to _accounts_path
+    if @account.update(account_params)
+      redirect_to accounts_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @_account = Account.find(params[:id])
-    @_account.destroy
-    redirect_to _accounts_path
+    @account = Account.find(params[:id])
+    @account.destroy
+    redirect_to accounts_path
   end
 
  
   private
-    def _account_params
-      params.require(:_account).permit(
+    def account_params
+      params.require(:account).permit(
         :account_number,
         :iban,
         :account_name,
         :currency,
         :opened_on,
         :closed_on,
-        :_account_type,
-        :_ownership_type,
-        :_status
+        :account_type,
+        :ownership_type,
+        :status
       )
 

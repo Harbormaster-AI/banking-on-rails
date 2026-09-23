@@ -1,5 +1,5 @@
 class KycProfile < ApplicationRecord
-  enum _STATUS: [:Pending, :Verified, :Rejected, :Expired]
+  enum STATUS: [:Pending, :Verified, :Rejected, :Expired]
 
 
   has_many :Customer, class_name: 'Customer'

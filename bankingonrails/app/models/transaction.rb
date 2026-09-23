@@ -1,15 +1,15 @@
 class Transaction < ApplicationRecord
-  enum _DIRECTION: [:Credit, :Debit]
-  enum _TRANSACTION_TYPE: [:Deposit, :Withdrawal, :Transfer, :Payment, :Fee, :Interest, :Adjustment, :Chargeback, :Refund, :FXConversion]
-  enum _STATUS: [:Pending, :Posted, :Reversed, :Failed, :Cancelled]
-  enum _CHANNEL: [:Branch, :Online, :Mobile, :ATM, :API, :CallCenter]
+  enum DIRECTION: [:Credit, :Debit]
+  enum TRANSACTION_TYPE: [:Deposit, :Withdrawal, :Transfer, :Payment, :Fee, :Interest, :Adjustment, :Chargeback, :Refund, :FXConversion]
+  enum STATUS: [:Pending, :Posted, :Reversed, :Failed, :Cancelled]
+  enum CHANNEL: [:Branch, :Online, :Mobile, :ATM, :API, :CallCenter]
 
 
-  composed_of :_money,
+  composed_of :money,
     class_name: "Money",
     mapping: [
-      %w[_money_amount amount], 
-      %w[_money_currency currency]
+      %w[money_amount amount], 
+      %w[money_currency currency]
     ]
 
   has_many :Account, class_name: 'Account'

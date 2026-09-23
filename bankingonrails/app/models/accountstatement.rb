@@ -1,19 +1,19 @@
 class AccountStatement < ApplicationRecord
-  enum _DELIVERY_METHOD: [:Electronic, :Paper]
+  enum DELIVERY_METHOD: [:Electronic, :Paper]
 
 
-  composed_of :_money,
+  composed_of :money,
     class_name: "Money",
     mapping: [
-      %w[_money_amount amount], 
-      %w[_money_currency currency]
+      %w[money_amount amount], 
+      %w[money_currency currency]
     ]
 
-  composed_of :_money,
+  composed_of :money,
     class_name: "Money",
     mapping: [
-      %w[_money_amount amount], 
-      %w[_money_currency currency]
+      %w[money_amount amount], 
+      %w[money_currency currency]
     ]
 
   has_many :Account, class_name: 'Account'

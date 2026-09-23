@@ -1,17 +1,17 @@
 class Customer < ApplicationRecord
-  enum _CUSTOMER_TYPE: [:Individual, :Business, :NonProfit, :Government]
-  enum _RISK_RATING: [:Low, :Medium, :High]
-  enum _KYC_STATUS: [:Pending, :Verified, :Rejected, :Expired]
+  enum CUSTOMER_TYPE: [:Individual, :Business, :NonProfit, :Government]
+  enum RISK_RATING: [:Low, :Medium, :High]
+  enum KYC_STATUS: [:Pending, :Verified, :Rejected, :Expired]
 
 
-  composed_of :_address,
+  composed_of :address,
     class_name: "Address",
     mapping: [
-      %w[_address_street street], 
-      %w[_address_city city], 
-      %w[_address_state state], 
-      %w[_address_postal_code postal_code], 
-      %w[_address_country country]
+      %w[address_street street], 
+      %w[address_city city], 
+      %w[address_state state], 
+      %w[address_postal_code postal_code], 
+      %w[address_country country]
     ]
 
   has_many :Bank, class_name: 'Bank'

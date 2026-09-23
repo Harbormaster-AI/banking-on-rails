@@ -1,6 +1,6 @@
 class Consent < ApplicationRecord
-  enum _CONSENT_TYPE: [:OpenBanking, :PaymentInitiation, :AccountInformation, :Marketing, :DataSharing]
-  enum _STATUS: [:Active, :Revoked, :Expired]
+  enum CONSENT_TYPE: [:OpenBanking, :PaymentInitiation, :AccountInformation, :Marketing, :DataSharing]
+  enum STATUS: [:Active, :Revoked, :Expired]
 
 
   has_many :Customer, class_name: 'Customer'

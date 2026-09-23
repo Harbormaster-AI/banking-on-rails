@@ -3,7 +3,7 @@ require "test_helper"
 class AccountControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @_account = _accounts(:one)
+    @account = accounts(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class AccountControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create _account" do
+  test "should create account" do
     assert_difference("Account.count") do
-      post _accounts_url, params: { _account: {
+      post accounts_url, params: { account: {
                         Status:Account.Statuss[0]
  } }
     end
 
-    assert_redirected_to _accounts_url
+    assert_redirected_to accounts_url
   end
 
  
   
-  test "should destroy _account" do
+  test "should destroy account" do
     assert_difference("Account.count", -1) do
-      delete _account_url(@_account)
+      delete account_url(@account)
     end
 
-    assert_redirected_to _accounts_url
+    assert_redirected_to accounts_url
   end
   
 end

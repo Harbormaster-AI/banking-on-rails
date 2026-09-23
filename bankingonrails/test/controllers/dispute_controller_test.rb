@@ -3,7 +3,7 @@ require "test_helper"
 class DisputeControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @_dispute = _disputes(:one)
+    @dispute = disputes(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class DisputeControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create _dispute" do
+  test "should create dispute" do
     assert_difference("Dispute.count") do
-      post _disputes_url, params: { _dispute: {
+      post disputes_url, params: { dispute: {
                         Status:Dispute.Statuss[0]
  } }
     end
 
-    assert_redirected_to _disputes_url
+    assert_redirected_to disputes_url
   end
 
  
   
-  test "should destroy _dispute" do
+  test "should destroy dispute" do
     assert_difference("Dispute.count", -1) do
-      delete _dispute_url(@_dispute)
+      delete dispute_url(@dispute)
     end
 
-    assert_redirected_to _disputes_url
+    assert_redirected_to disputes_url
   end
   
 end

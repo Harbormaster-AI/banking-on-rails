@@ -1,12 +1,12 @@
 class FeeCharge < ApplicationRecord
-  enum _FEE_TYPE: [:Maintenance, :Overdraft, :Wire, :ATM, :CardAnnual, :LatePayment, :EarlyWithdrawal, :ReplacementCard]
+  enum FEE_TYPE: [:Maintenance, :Overdraft, :Wire, :ATM, :CardAnnual, :LatePayment, :EarlyWithdrawal, :ReplacementCard]
 
 
-  composed_of :_money,
+  composed_of :money,
     class_name: "Money",
     mapping: [
-      %w[_money_amount amount], 
-      %w[_money_currency currency]
+      %w[money_amount amount], 
+      %w[money_currency currency]
     ]
 
   has_many :Account, class_name: 'Account'

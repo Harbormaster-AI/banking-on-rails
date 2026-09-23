@@ -3,7 +3,7 @@ require "test_helper"
 class CollateralControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @_collateral = _collaterals(:one)
+    @collateral = collaterals(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class CollateralControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create _collateral" do
+  test "should create collateral" do
     assert_difference("Collateral.count") do
-      post _collaterals_url, params: { _collateral: {
+      post collaterals_url, params: { collateral: {
                         CollateralType:Collateral.CollateralTypes[0]
  } }
     end
 
-    assert_redirected_to _collaterals_url
+    assert_redirected_to collaterals_url
   end
 
  
   
-  test "should destroy _collateral" do
+  test "should destroy collateral" do
     assert_difference("Collateral.count", -1) do
-      delete _collateral_url(@_collateral)
+      delete collateral_url(@collateral)
     end
 
-    assert_redirected_to _collaterals_url
+    assert_redirected_to collaterals_url
   end
   
 end

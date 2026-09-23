@@ -1,19 +1,19 @@
 class Account < ApplicationRecord
-  enum _ACCOUNT_TYPE: [:Checking, :Savings, :MoneyMarket, :TimeDeposit]
-  enum _OWNERSHIP_TYPE: [:Sole, :Joint, :Corporate, :Trust]
-  enum _STATUS: [:Open, :Frozen, :Dormant, :Closed]
+  enum ACCOUNT_TYPE: [:Checking, :Savings, :MoneyMarket, :TimeDeposit]
+  enum OWNERSHIP_TYPE: [:Sole, :Joint, :Corporate, :Trust]
+  enum STATUS: [:Open, :Frozen, :Dormant, :Closed]
 
 
-  composed_of :_account_number,
+  composed_of :account_number,
     class_name: "AccountNumber",
     mapping: [
-      %w[_account_number_value value]
+      %w[account_number_value value]
     ]
 
-  composed_of :_i_b_a_n,
+  composed_of :i_b_a_n,
     class_name: "IBAN",
     mapping: [
-      %w[_i_b_a_n_value value]
+      %w[i_b_a_n_value value]
     ]
 
   has_many :Bank, class_name: 'Bank'
