@@ -58,3 +58,5 @@ class CustomersController < ApplicationController
         :kyc_status
       )
 
+  end
+end

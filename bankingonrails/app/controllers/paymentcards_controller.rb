@@ -54,3 +54,5 @@ class PaymentCardsController < ApplicationController
         :network
       )
 
+  end
+end

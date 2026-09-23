@@ -53,3 +53,5 @@ class RepaymentSchedulesController < ApplicationController
         :status
       )
 
+  end
+end

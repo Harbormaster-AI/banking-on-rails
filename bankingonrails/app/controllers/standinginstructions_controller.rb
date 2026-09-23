@@ -52,3 +52,5 @@ class StandingInstructionsController < ApplicationController
         :status
       )
 
+  end
+end

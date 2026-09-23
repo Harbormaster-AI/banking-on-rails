@@ -50,3 +50,5 @@ class KycProfilesController < ApplicationController
         :status
       )
 
+  end
+end

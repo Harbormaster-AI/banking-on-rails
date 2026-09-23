@@ -55,3 +55,5 @@ class TransactionsController < ApplicationController
         :channel
       )
 
+  end
+end

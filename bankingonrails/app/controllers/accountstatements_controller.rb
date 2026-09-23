@@ -53,3 +53,5 @@ class AccountStatementsController < ApplicationController
         :delivery_method
       )
 
+  end
+end

@@ -55,3 +55,5 @@ class FundsTransfersController < ApplicationController
         :status
       )
 
+  end
+end

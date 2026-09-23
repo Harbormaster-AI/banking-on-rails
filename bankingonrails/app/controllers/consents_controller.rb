@@ -51,3 +51,5 @@ class ConsentsController < ApplicationController
         :status
       )
 
+  end
+end

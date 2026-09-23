@@ -51,3 +51,5 @@ class DisputesController < ApplicationController
         :status
       )
 
+  end
+end

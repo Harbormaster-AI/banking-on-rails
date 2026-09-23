@@ -56,3 +56,5 @@ class AccountsController < ApplicationController
         :status
       )
 
+  end
+end

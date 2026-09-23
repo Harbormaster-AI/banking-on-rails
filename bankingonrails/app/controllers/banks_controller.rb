@@ -52,3 +52,5 @@ class BanksController < ApplicationController
         :website
       )
 
+  end
+end

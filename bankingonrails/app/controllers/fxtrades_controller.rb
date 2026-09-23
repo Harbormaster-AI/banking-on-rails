@@ -54,3 +54,5 @@ class FXTradesController < ApplicationController
         :status
       )
 
+  end
+end

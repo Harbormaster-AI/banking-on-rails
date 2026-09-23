@@ -50,3 +50,5 @@ class ScreeningResultsController < ApplicationController
         :outcome
       )
 
+  end
+end

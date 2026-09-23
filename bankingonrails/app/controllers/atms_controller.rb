@@ -50,3 +50,5 @@ class ATMsController < ApplicationController
         :status
       )
 
+  end
+end

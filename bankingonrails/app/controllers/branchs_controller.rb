@@ -52,3 +52,5 @@ class BranchsController < ApplicationController
         :opening_hours
       )
 
+  end
+end

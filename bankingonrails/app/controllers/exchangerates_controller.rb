@@ -52,3 +52,5 @@ class ExchangeRatesController < ApplicationController
         :source
       )
 
+  end
+end

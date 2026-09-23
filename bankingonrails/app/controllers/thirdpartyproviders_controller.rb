@@ -50,3 +50,5 @@ class ThirdPartyProvidersController < ApplicationController
         :website
       )
 
+  end
+end

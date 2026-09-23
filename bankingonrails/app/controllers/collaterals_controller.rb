@@ -52,3 +52,5 @@ class CollateralsController < ApplicationController
         :collateral_type
       )
 
+  end
+end

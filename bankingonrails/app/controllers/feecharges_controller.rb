@@ -51,3 +51,5 @@ class FeeChargesController < ApplicationController
         :fee_type
       )
 
+  end
+end

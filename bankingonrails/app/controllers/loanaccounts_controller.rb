@@ -59,3 +59,5 @@ class LoanAccountsController < ApplicationController
         :status
       )
 
+  end
+end

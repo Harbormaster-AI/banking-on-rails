@@ -51,3 +51,5 @@ class BankingProductsController < ApplicationController
         :product_category
       )
 
+  end
+end

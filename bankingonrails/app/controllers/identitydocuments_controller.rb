@@ -51,3 +51,5 @@ class IdentityDocumentsController < ApplicationController
         :document_type
       )
 
+  end
+end

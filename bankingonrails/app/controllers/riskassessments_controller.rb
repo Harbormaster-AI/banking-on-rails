@@ -50,3 +50,5 @@ class RiskAssessmentsController < ApplicationController
         :rating
       )
 
+  end
+end
