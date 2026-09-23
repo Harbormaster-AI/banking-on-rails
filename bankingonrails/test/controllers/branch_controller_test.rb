@@ -3,7 +3,7 @@ require "test_helper"
 class BranchControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @branch = branchs(:one)
+    @_branch = _branchs(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class BranchControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create branch" do
+  test "should create _branch" do
     assert_difference("Branch.count") do
-      post branchs_url, params: { branch: {
+      post _branchs_url, params: { _branch: {
                         openingHours:"test string for openingHours"
  } }
     end
 
-    assert_redirected_to branchs_url
+    assert_redirected_to _branchs_url
   end
 
  
   
-  test "should destroy branch" do
+  test "should destroy _branch" do
     assert_difference("Branch.count", -1) do
-      delete branch_url(@branch)
+      delete _branch_url(@_branch)
     end
 
-    assert_redirected_to branchs_url
+    assert_redirected_to _branchs_url
   end
   
 end

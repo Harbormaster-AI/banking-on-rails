@@ -3,7 +3,7 @@ require "test_helper"
 class BankControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @bank = banks(:one)
+    @_bank = _banks(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class BankControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create bank" do
+  test "should create _bank" do
     assert_difference("Bank.count") do
-      post banks_url, params: { bank: {
+      post _banks_url, params: { _bank: {
                         website:"test string for website"
  } }
     end
 
-    assert_redirected_to banks_url
+    assert_redirected_to _banks_url
   end
 
  
   
-  test "should destroy bank" do
+  test "should destroy _bank" do
     assert_difference("Bank.count", -1) do
-      delete bank_url(@bank)
+      delete _bank_url(@_bank)
     end
 
-    assert_redirected_to banks_url
+    assert_redirected_to _banks_url
   end
   
 end

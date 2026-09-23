@@ -3,7 +3,7 @@ require "test_helper"
 class StandingInstructionControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @standingInstruction = standingInstructions(:one)
+    @_standing_instruction = _standing_instructions(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class StandingInstructionControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create standingInstruction" do
+  test "should create _standing_instruction" do
     assert_difference("StandingInstruction.count") do
-      post standingInstructions_url, params: { standingInstruction: {
+      post _standing_instructions_url, params: { _standing_instruction: {
                         Status:StandingInstruction.Statuss[0]
  } }
     end
 
-    assert_redirected_to standingInstructions_url
+    assert_redirected_to _standing_instructions_url
   end
 
  
   
-  test "should destroy standingInstruction" do
+  test "should destroy _standing_instruction" do
     assert_difference("StandingInstruction.count", -1) do
-      delete standingInstruction_url(@standingInstruction)
+      delete _standing_instruction_url(@_standing_instruction)
     end
 
-    assert_redirected_to standingInstructions_url
+    assert_redirected_to _standing_instructions_url
   end
   
 end

@@ -3,7 +3,7 @@ require "test_helper"
 class RiskAssessmentControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @riskAssessment = riskAssessments(:one)
+    @_risk_assessment = _risk_assessments(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class RiskAssessmentControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create riskAssessment" do
+  test "should create _risk_assessment" do
     assert_difference("RiskAssessment.count") do
-      post riskAssessments_url, params: { riskAssessment: {
+      post _risk_assessments_url, params: { _risk_assessment: {
                         Rating:RiskAssessment.Ratings[0]
  } }
     end
 
-    assert_redirected_to riskAssessments_url
+    assert_redirected_to _risk_assessments_url
   end
 
  
   
-  test "should destroy riskAssessment" do
+  test "should destroy _risk_assessment" do
     assert_difference("RiskAssessment.count", -1) do
-      delete riskAssessment_url(@riskAssessment)
+      delete _risk_assessment_url(@_risk_assessment)
     end
 
-    assert_redirected_to riskAssessments_url
+    assert_redirected_to _risk_assessments_url
   end
   
 end

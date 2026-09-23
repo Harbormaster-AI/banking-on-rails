@@ -3,7 +3,7 @@ require "test_helper"
 class RepaymentScheduleControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @repaymentSchedule = repaymentSchedules(:one)
+    @_repayment_schedule = _repayment_schedules(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class RepaymentScheduleControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create repaymentSchedule" do
+  test "should create _repayment_schedule" do
     assert_difference("RepaymentSchedule.count") do
-      post repaymentSchedules_url, params: { repaymentSchedule: {
+      post _repayment_schedules_url, params: { _repayment_schedule: {
                         Status:RepaymentSchedule.Statuss[0]
  } }
     end
 
-    assert_redirected_to repaymentSchedules_url
+    assert_redirected_to _repayment_schedules_url
   end
 
  
   
-  test "should destroy repaymentSchedule" do
+  test "should destroy _repayment_schedule" do
     assert_difference("RepaymentSchedule.count", -1) do
-      delete repaymentSchedule_url(@repaymentSchedule)
+      delete _repayment_schedule_url(@_repayment_schedule)
     end
 
-    assert_redirected_to repaymentSchedules_url
+    assert_redirected_to _repayment_schedules_url
   end
   
 end

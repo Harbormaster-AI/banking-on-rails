@@ -3,7 +3,7 @@ require "test_helper"
 class FundsTransferControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @fundsTransfer = fundsTransfers(:one)
+    @_funds_transfer = _funds_transfers(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class FundsTransferControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create fundsTransfer" do
+  test "should create _funds_transfer" do
     assert_difference("FundsTransfer.count") do
-      post fundsTransfers_url, params: { fundsTransfer: {
+      post _funds_transfers_url, params: { _funds_transfer: {
                         Status:FundsTransfer.Statuss[0]
  } }
     end
 
-    assert_redirected_to fundsTransfers_url
+    assert_redirected_to _funds_transfers_url
   end
 
  
   
-  test "should destroy fundsTransfer" do
+  test "should destroy _funds_transfer" do
     assert_difference("FundsTransfer.count", -1) do
-      delete fundsTransfer_url(@fundsTransfer)
+      delete _funds_transfer_url(@_funds_transfer)
     end
 
-    assert_redirected_to fundsTransfers_url
+    assert_redirected_to _funds_transfers_url
   end
   
 end

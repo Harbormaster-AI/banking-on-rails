@@ -3,7 +3,7 @@ require "test_helper"
 class LoanPaymentControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @loanPayment = loanPayments(:one)
+    @_loan_payment = _loan_payments(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class LoanPaymentControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create loanPayment" do
+  test "should create _loan_payment" do
     assert_difference("LoanPayment.count") do
-      post loanPayments_url, params: { loanPayment: {
+      post _loan_payments_url, params: { _loan_payment: {
                         Status:LoanPayment.Statuss[0]
  } }
     end
 
-    assert_redirected_to loanPayments_url
+    assert_redirected_to _loan_payments_url
   end
 
  
   
-  test "should destroy loanPayment" do
+  test "should destroy _loan_payment" do
     assert_difference("LoanPayment.count", -1) do
-      delete loanPayment_url(@loanPayment)
+      delete _loan_payment_url(@_loan_payment)
     end
 
-    assert_redirected_to loanPayments_url
+    assert_redirected_to _loan_payments_url
   end
   
 end

@@ -3,7 +3,7 @@ require "test_helper"
 class ScreeningResultControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @screeningResult = screeningResults(:one)
+    @_screening_result = _screening_results(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class ScreeningResultControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create screeningResult" do
+  test "should create _screening_result" do
     assert_difference("ScreeningResult.count") do
-      post screeningResults_url, params: { screeningResult: {
+      post _screening_results_url, params: { _screening_result: {
                         Outcome:ScreeningResult.Outcomes[0]
  } }
     end
 
-    assert_redirected_to screeningResults_url
+    assert_redirected_to _screening_results_url
   end
 
  
   
-  test "should destroy screeningResult" do
+  test "should destroy _screening_result" do
     assert_difference("ScreeningResult.count", -1) do
-      delete screeningResult_url(@screeningResult)
+      delete _screening_result_url(@_screening_result)
     end
 
-    assert_redirected_to screeningResults_url
+    assert_redirected_to _screening_results_url
   end
   
 end

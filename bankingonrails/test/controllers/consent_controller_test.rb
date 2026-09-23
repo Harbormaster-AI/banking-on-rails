@@ -3,7 +3,7 @@ require "test_helper"
 class ConsentControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @consent = consents(:one)
+    @_consent = _consents(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class ConsentControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create consent" do
+  test "should create _consent" do
     assert_difference("Consent.count") do
-      post consents_url, params: { consent: {
+      post _consents_url, params: { _consent: {
                         Status:Consent.Statuss[0]
  } }
     end
 
-    assert_redirected_to consents_url
+    assert_redirected_to _consents_url
   end
 
  
   
-  test "should destroy consent" do
+  test "should destroy _consent" do
     assert_difference("Consent.count", -1) do
-      delete consent_url(@consent)
+      delete _consent_url(@_consent)
     end
 
-    assert_redirected_to consents_url
+    assert_redirected_to _consents_url
   end
   
 end

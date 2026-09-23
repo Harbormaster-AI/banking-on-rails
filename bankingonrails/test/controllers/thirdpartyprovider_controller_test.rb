@@ -3,7 +3,7 @@ require "test_helper"
 class ThirdPartyProviderControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @thirdPartyProvider = thirdPartyProviders(:one)
+    @_third_party_provider = _third_party_providers(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class ThirdPartyProviderControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create thirdPartyProvider" do
+  test "should create _third_party_provider" do
     assert_difference("ThirdPartyProvider.count") do
-      post thirdPartyProviders_url, params: { thirdPartyProvider: {
+      post _third_party_providers_url, params: { _third_party_provider: {
                         website:"test string for website"
  } }
     end
 
-    assert_redirected_to thirdPartyProviders_url
+    assert_redirected_to _third_party_providers_url
   end
 
  
   
-  test "should destroy thirdPartyProvider" do
+  test "should destroy _third_party_provider" do
     assert_difference("ThirdPartyProvider.count", -1) do
-      delete thirdPartyProvider_url(@thirdPartyProvider)
+      delete _third_party_provider_url(@_third_party_provider)
     end
 
-    assert_redirected_to thirdPartyProviders_url
+    assert_redirected_to _third_party_providers_url
   end
   
 end

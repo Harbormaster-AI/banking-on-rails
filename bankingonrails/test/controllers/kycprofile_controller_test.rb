@@ -3,7 +3,7 @@ require "test_helper"
 class KycProfileControllerTest < ActionDispatch::IntegrationTest
   # called before every single test
   setup do
-    @kycProfile = kycProfiles(:one)
+    @_kyc_profile = _kyc_profiles(:one)
   end
 
   # called after every single test
@@ -12,24 +12,24 @@ class KycProfileControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "should create kycProfile" do
+  test "should create _kyc_profile" do
     assert_difference("KycProfile.count") do
-      post kycProfiles_url, params: { kycProfile: {
+      post _kyc_profiles_url, params: { _kyc_profile: {
                         Status:KycProfile.Statuss[0]
  } }
     end
 
-    assert_redirected_to kycProfiles_url
+    assert_redirected_to _kyc_profiles_url
   end
 
  
   
-  test "should destroy kycProfile" do
+  test "should destroy _kyc_profile" do
     assert_difference("KycProfile.count", -1) do
-      delete kycProfile_url(@kycProfile)
+      delete _kyc_profile_url(@_kyc_profile)
     end
 
-    assert_redirected_to kycProfiles_url
+    assert_redirected_to _kyc_profiles_url
   end
   
 end
