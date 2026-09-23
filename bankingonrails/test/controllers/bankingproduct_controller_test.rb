@@ -14,7 +14,9 @@ class BankingProductControllerTest < ActionDispatch::IntegrationTest
 
   test "should create bankingProduct" do
     assert_difference("BankingProduct.count") do
-      post bankingProducts_url, params: { bankingProduct: { productCode:"test string for productCode", name:"test string for name", description:"test string for description", ProductCategory:BankingProduct.ProductCategorys[0] } }
+      post bankingProducts_url, params: { bankingProduct: {
+                        ProductCategory:BankingProduct.ProductCategorys[0]
+ } }
     end
 
     assert_redirected_to bankingProducts_url

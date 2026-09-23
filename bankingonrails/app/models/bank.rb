@@ -2,10 +2,10 @@
 class Bank < ApplicationRecord
 
 
-  composed_of :bIC,
+  composed_of :_b_i_c,
     class_name: "BIC",
     mapping: [
-      %w[bIC_value value]
+      %w[_b_i_c_value value]
     ]
 
   has_many :Branches, class_name: 'Branch'

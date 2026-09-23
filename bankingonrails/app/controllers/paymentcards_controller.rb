@@ -1,50 +1,50 @@
 
 class PaymentCardsController < ApplicationController
   def index
-    @paymentCards = PaymentCard.all
+    @_payment_cards = PaymentCard.all
   end
  
   def find
-    @paymentCard = PaymentCard.find(params[:id])
+    @_payment_card = PaymentCard.find(params[:id])
   end
  
   def new
-    @paymentCard = PaymentCard.new
+    @_payment_card = PaymentCard.new
   end
  
   def edit
-    @paymentCard = PaymentCard.find(params[:id])
+    @_payment_card = PaymentCard.find(params[:id])
   end
  
   def create
-    @paymentCard = PaymentCard.new(paymentCard_params)
+    @_payment_card = PaymentCard.new(_payment_card_params)
  
-    if @paymentCard.save
-      redirect_to paymentCards_path
+    if @_payment_card.save
+      redirect_to _payment_cards_path
     else
       render 'new'
     end
   end
  
   def update
-    @paymentCard = PaymentCard.find(params[:id])
+    @_payment_card = PaymentCard.find(params[:id])
  
-    if @paymentCard.update(paymentCard_params)
-      redirect_to paymentCards_path
+    if @_payment_card.update(_payment_card_params)
+      redirect_to _payment_cards_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @paymentCard = PaymentCard.find(params[:id])
-    @paymentCard.destroy
-    redirect_to paymentCards_path
+    @_payment_card = PaymentCard.find(params[:id])
+    @_payment_card.destroy
+    redirect_to _payment_cards_path
   end
 
  
   private
-    def paymentCard_params
-      params.require(:paymentCard).permit(:cardNumber, :embossedName, :expiryMonth, :expiryYear, :CardType, :CardStatus, :Network)
+    def _payment_card_params
+      params.require(:_payment_card).permit(:cardNumber, :embossedName, :expiryMonth, :expiryYear, :CardType, :CardStatus, :Network)
     end
 end

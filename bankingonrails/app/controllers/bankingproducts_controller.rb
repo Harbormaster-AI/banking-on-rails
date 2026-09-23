@@ -1,50 +1,50 @@
 
 class BankingProductsController < ApplicationController
   def index
-    @bankingProducts = BankingProduct.all
+    @_banking_products = BankingProduct.all
   end
  
   def find
-    @bankingProduct = BankingProduct.find(params[:id])
+    @_banking_product = BankingProduct.find(params[:id])
   end
  
   def new
-    @bankingProduct = BankingProduct.new
+    @_banking_product = BankingProduct.new
   end
  
   def edit
-    @bankingProduct = BankingProduct.find(params[:id])
+    @_banking_product = BankingProduct.find(params[:id])
   end
  
   def create
-    @bankingProduct = BankingProduct.new(bankingProduct_params)
+    @_banking_product = BankingProduct.new(_banking_product_params)
  
-    if @bankingProduct.save
-      redirect_to bankingProducts_path
+    if @_banking_product.save
+      redirect_to _banking_products_path
     else
       render 'new'
     end
   end
  
   def update
-    @bankingProduct = BankingProduct.find(params[:id])
+    @_banking_product = BankingProduct.find(params[:id])
  
-    if @bankingProduct.update(bankingProduct_params)
-      redirect_to bankingProducts_path
+    if @_banking_product.update(_banking_product_params)
+      redirect_to _banking_products_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @bankingProduct = BankingProduct.find(params[:id])
-    @bankingProduct.destroy
-    redirect_to bankingProducts_path
+    @_banking_product = BankingProduct.find(params[:id])
+    @_banking_product.destroy
+    redirect_to _banking_products_path
   end
 
  
   private
-    def bankingProduct_params
-      params.require(:bankingProduct).permit(:productCode, :name, :description, :ProductCategory)
+    def _banking_product_params
+      params.require(:_banking_product).permit(:productCode, :name, :description, :ProductCategory)
     end
 end

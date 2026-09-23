@@ -1,50 +1,50 @@
 
 class FXTradesController < ApplicationController
   def index
-    @fXTrades = FXTrade.all
+    @_f_x_trades = FXTrade.all
   end
  
   def find
-    @fXTrade = FXTrade.find(params[:id])
+    @_f_x_trade = FXTrade.find(params[:id])
   end
  
   def new
-    @fXTrade = FXTrade.new
+    @_f_x_trade = FXTrade.new
   end
  
   def edit
-    @fXTrade = FXTrade.find(params[:id])
+    @_f_x_trade = FXTrade.find(params[:id])
   end
  
   def create
-    @fXTrade = FXTrade.new(fXTrade_params)
+    @_f_x_trade = FXTrade.new(_f_x_trade_params)
  
-    if @fXTrade.save
-      redirect_to fXTrades_path
+    if @_f_x_trade.save
+      redirect_to _f_x_trades_path
     else
       render 'new'
     end
   end
  
   def update
-    @fXTrade = FXTrade.find(params[:id])
+    @_f_x_trade = FXTrade.find(params[:id])
  
-    if @fXTrade.update(fXTrade_params)
-      redirect_to fXTrades_path
+    if @_f_x_trade.update(_f_x_trade_params)
+      redirect_to _f_x_trades_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @fXTrade = FXTrade.find(params[:id])
-    @fXTrade.destroy
-    redirect_to fXTrades_path
+    @_f_x_trade = FXTrade.find(params[:id])
+    @_f_x_trade.destroy
+    redirect_to _f_x_trades_path
   end
 
  
   private
-    def fXTrade_params
-      params.require(:fXTrade).permit(:tradeReference, :tradeDate, :settlementDate, :amountSold, :amountBought, :rate, :Status)
+    def _f_x_trade_params
+      params.require(:_f_x_trade).permit(:tradeReference, :tradeDate, :settlementDate, :amountSold, :amountBought, :rate, :Status)
     end
 end

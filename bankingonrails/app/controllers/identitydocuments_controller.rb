@@ -1,50 +1,50 @@
 
 class IdentityDocumentsController < ApplicationController
   def index
-    @identityDocuments = IdentityDocument.all
+    @_identity_documents = IdentityDocument.all
   end
  
   def find
-    @identityDocument = IdentityDocument.find(params[:id])
+    @_identity_document = IdentityDocument.find(params[:id])
   end
  
   def new
-    @identityDocument = IdentityDocument.new
+    @_identity_document = IdentityDocument.new
   end
  
   def edit
-    @identityDocument = IdentityDocument.find(params[:id])
+    @_identity_document = IdentityDocument.find(params[:id])
   end
  
   def create
-    @identityDocument = IdentityDocument.new(identityDocument_params)
+    @_identity_document = IdentityDocument.new(_identity_document_params)
  
-    if @identityDocument.save
-      redirect_to identityDocuments_path
+    if @_identity_document.save
+      redirect_to _identity_documents_path
     else
       render 'new'
     end
   end
  
   def update
-    @identityDocument = IdentityDocument.find(params[:id])
+    @_identity_document = IdentityDocument.find(params[:id])
  
-    if @identityDocument.update(identityDocument_params)
-      redirect_to identityDocuments_path
+    if @_identity_document.update(_identity_document_params)
+      redirect_to _identity_documents_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @identityDocument = IdentityDocument.find(params[:id])
-    @identityDocument.destroy
-    redirect_to identityDocuments_path
+    @_identity_document = IdentityDocument.find(params[:id])
+    @_identity_document.destroy
+    redirect_to _identity_documents_path
   end
 
  
   private
-    def identityDocument_params
-      params.require(:identityDocument).permit(:documentNumber, :issuingCountry, :expirationDate, :DocumentType)
+    def _identity_document_params
+      params.require(:_identity_document).permit(:documentNumber, :issuingCountry, :expirationDate, :DocumentType)
     end
 end

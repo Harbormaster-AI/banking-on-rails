@@ -1,50 +1,50 @@
 
 class LoanPaymentsController < ApplicationController
   def index
-    @loanPayments = LoanPayment.all
+    @_loan_payments = LoanPayment.all
   end
  
   def find
-    @loanPayment = LoanPayment.find(params[:id])
+    @_loan_payment = LoanPayment.find(params[:id])
   end
  
   def new
-    @loanPayment = LoanPayment.new
+    @_loan_payment = LoanPayment.new
   end
  
   def edit
-    @loanPayment = LoanPayment.find(params[:id])
+    @_loan_payment = LoanPayment.find(params[:id])
   end
  
   def create
-    @loanPayment = LoanPayment.new(loanPayment_params)
+    @_loan_payment = LoanPayment.new(_loan_payment_params)
  
-    if @loanPayment.save
-      redirect_to loanPayments_path
+    if @_loan_payment.save
+      redirect_to _loan_payments_path
     else
       render 'new'
     end
   end
  
   def update
-    @loanPayment = LoanPayment.find(params[:id])
+    @_loan_payment = LoanPayment.find(params[:id])
  
-    if @loanPayment.update(loanPayment_params)
-      redirect_to loanPayments_path
+    if @_loan_payment.update(_loan_payment_params)
+      redirect_to _loan_payments_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @loanPayment = LoanPayment.find(params[:id])
-    @loanPayment.destroy
-    redirect_to loanPayments_path
+    @_loan_payment = LoanPayment.find(params[:id])
+    @_loan_payment.destroy
+    redirect_to _loan_payments_path
   end
 
  
   private
-    def loanPayment_params
-      params.require(:loanPayment).permit(:paymentReference, :amount, :paymentDate, :Method, :Status)
+    def _loan_payment_params
+      params.require(:_loan_payment).permit(:paymentReference, :amount, :paymentDate, :Method, :Status)
     end
 end

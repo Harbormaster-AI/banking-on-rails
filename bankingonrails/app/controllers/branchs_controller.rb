@@ -1,50 +1,50 @@
 
 class BranchsController < ApplicationController
   def index
-    @branchs = Branch.all
+    @_branchs = Branch.all
   end
  
   def find
-    @branch = Branch.find(params[:id])
+    @_branch = Branch.find(params[:id])
   end
  
   def new
-    @branch = Branch.new
+    @_branch = Branch.new
   end
  
   def edit
-    @branch = Branch.find(params[:id])
+    @_branch = Branch.find(params[:id])
   end
  
   def create
-    @branch = Branch.new(branch_params)
+    @_branch = Branch.new(_branch_params)
  
-    if @branch.save
-      redirect_to branchs_path
+    if @_branch.save
+      redirect_to _branchs_path
     else
       render 'new'
     end
   end
  
   def update
-    @branch = Branch.find(params[:id])
+    @_branch = Branch.find(params[:id])
  
-    if @branch.update(branch_params)
-      redirect_to branchs_path
+    if @_branch.update(_branch_params)
+      redirect_to _branchs_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @branch = Branch.find(params[:id])
-    @branch.destroy
-    redirect_to branchs_path
+    @_branch = Branch.find(params[:id])
+    @_branch.destroy
+    redirect_to _branchs_path
   end
 
  
   private
-    def branch_params
-      params.require(:branch).permit(:name, :branchCode, :address, :phone, :openingHours)
+    def _branch_params
+      params.require(:_branch).permit(:name, :branchCode, :address, :phone, :openingHours)
     end
 end

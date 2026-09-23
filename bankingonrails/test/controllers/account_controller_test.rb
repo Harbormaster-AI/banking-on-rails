@@ -14,7 +14,9 @@ class AccountControllerTest < ActionDispatch::IntegrationTest
 
   test "should create account" do
     assert_difference("Account.count") do
-      post accounts_url, params: { account: { accountNumber:"test value", iban:"test value", accountName:"test string for accountName", currency:"test string for currency", openedOn:1.week.ago, closedOn:1.week.ago, AccountType:Account.AccountTypes[0], OwnershipType:Account.OwnershipTypes[0], Status:Account.Statuss[0] } }
+      post accounts_url, params: { account: {
+                        Status:Account.Statuss[0]
+ } }
     end
 
     assert_redirected_to accounts_url

@@ -14,7 +14,9 @@ class LoanPaymentControllerTest < ActionDispatch::IntegrationTest
 
   test "should create loanPayment" do
     assert_difference("LoanPayment.count") do
-      post loanPayments_url, params: { loanPayment: { paymentReference:"test string for paymentReference", amount:"test value", paymentDate:1.week.ago, Method:LoanPayment.Methods[0], Status:LoanPayment.Statuss[0] } }
+      post loanPayments_url, params: { loanPayment: {
+                        Status:LoanPayment.Statuss[0]
+ } }
     end
 
     assert_redirected_to loanPayments_url

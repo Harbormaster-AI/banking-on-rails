@@ -1,50 +1,50 @@
 
 class AccountStatementsController < ApplicationController
   def index
-    @accountStatements = AccountStatement.all
+    @_account_statements = AccountStatement.all
   end
  
   def find
-    @accountStatement = AccountStatement.find(params[:id])
+    @_account_statement = AccountStatement.find(params[:id])
   end
  
   def new
-    @accountStatement = AccountStatement.new
+    @_account_statement = AccountStatement.new
   end
  
   def edit
-    @accountStatement = AccountStatement.find(params[:id])
+    @_account_statement = AccountStatement.find(params[:id])
   end
  
   def create
-    @accountStatement = AccountStatement.new(accountStatement_params)
+    @_account_statement = AccountStatement.new(_account_statement_params)
  
-    if @accountStatement.save
-      redirect_to accountStatements_path
+    if @_account_statement.save
+      redirect_to _account_statements_path
     else
       render 'new'
     end
   end
  
   def update
-    @accountStatement = AccountStatement.find(params[:id])
+    @_account_statement = AccountStatement.find(params[:id])
  
-    if @accountStatement.update(accountStatement_params)
-      redirect_to accountStatements_path
+    if @_account_statement.update(_account_statement_params)
+      redirect_to _account_statements_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @accountStatement = AccountStatement.find(params[:id])
-    @accountStatement.destroy
-    redirect_to accountStatements_path
+    @_account_statement = AccountStatement.find(params[:id])
+    @_account_statement.destroy
+    redirect_to _account_statements_path
   end
 
  
   private
-    def accountStatement_params
-      params.require(:accountStatement).permit(:statementNumber, :periodStart, :periodEnd, :openingBalance, :closingBalance, :DeliveryMethod)
+    def _account_statement_params
+      params.require(:_account_statement).permit(:statementNumber, :periodStart, :periodEnd, :openingBalance, :closingBalance, :DeliveryMethod)
     end
 end

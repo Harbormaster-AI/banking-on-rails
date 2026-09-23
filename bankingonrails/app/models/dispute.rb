@@ -1,6 +1,6 @@
 
 class Dispute < ApplicationRecord
-  enum Status: [:Open, :UnderReview, :Resolved, :Rejected, :Withdrawn]
+  enum _STATUS: [:Open, :UnderReview, :Resolved, :Rejected, :Withdrawn]
 
 
   has_many :Transaction, class_name: 'Transaction'

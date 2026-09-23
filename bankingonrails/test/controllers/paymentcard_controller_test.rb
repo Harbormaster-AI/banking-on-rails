@@ -14,7 +14,9 @@ class PaymentCardControllerTest < ActionDispatch::IntegrationTest
 
   test "should create paymentCard" do
     assert_difference("PaymentCard.count") do
-      post paymentCards_url, params: { paymentCard: { cardNumber:"test value", embossedName:"test string for embossedName", expiryMonth:100, expiryYear:100, CardType:PaymentCard.CardTypes[0], CardStatus:PaymentCard.CardStatuss[0], Network:PaymentCard.Networks[0] } }
+      post paymentCards_url, params: { paymentCard: {
+                        Network:PaymentCard.Networks[0]
+ } }
     end
 
     assert_redirected_to paymentCards_url

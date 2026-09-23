@@ -1,6 +1,6 @@
 
 class BankingProduct < ApplicationRecord
-  enum ProductCategory: [:Deposit, :Loan, :Card, :PaymentService, :Investment]
+  enum _PRODUCT_CATEGORY: [:Deposit, :Loan, :Card, :PaymentService, :Investment]
 
 
   has_many :Bank, class_name: 'Bank'

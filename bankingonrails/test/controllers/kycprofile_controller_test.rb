@@ -14,7 +14,9 @@ class KycProfileControllerTest < ActionDispatch::IntegrationTest
 
   test "should create kycProfile" do
     assert_difference("KycProfile.count") do
-      post kycProfiles_url, params: { kycProfile: { profileId:"test string for profileId", lastReviewedOn:1.week.ago, Status:KycProfile.Statuss[0] } }
+      post kycProfiles_url, params: { kycProfile: {
+                        Status:KycProfile.Statuss[0]
+ } }
     end
 
     assert_redirected_to kycProfiles_url

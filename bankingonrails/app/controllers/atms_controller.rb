@@ -1,50 +1,50 @@
 
 class ATMsController < ApplicationController
   def index
-    @aTMs = ATM.all
+    @_a_t_ms = ATM.all
   end
  
   def find
-    @aTM = ATM.find(params[:id])
+    @_a_t_m = ATM.find(params[:id])
   end
  
   def new
-    @aTM = ATM.new
+    @_a_t_m = ATM.new
   end
  
   def edit
-    @aTM = ATM.find(params[:id])
+    @_a_t_m = ATM.find(params[:id])
   end
  
   def create
-    @aTM = ATM.new(aTM_params)
+    @_a_t_m = ATM.new(_a_t_m_params)
  
-    if @aTM.save
-      redirect_to aTMs_path
+    if @_a_t_m.save
+      redirect_to _a_t_ms_path
     else
       render 'new'
     end
   end
  
   def update
-    @aTM = ATM.find(params[:id])
+    @_a_t_m = ATM.find(params[:id])
  
-    if @aTM.update(aTM_params)
-      redirect_to aTMs_path
+    if @_a_t_m.update(_a_t_m_params)
+      redirect_to _a_t_ms_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @aTM = ATM.find(params[:id])
-    @aTM.destroy
-    redirect_to aTMs_path
+    @_a_t_m = ATM.find(params[:id])
+    @_a_t_m.destroy
+    redirect_to _a_t_ms_path
   end
 
  
   private
-    def aTM_params
-      params.require(:aTM).permit(:terminalId, :location, :Status)
+    def _a_t_m_params
+      params.require(:_a_t_m).permit(:terminalId, :location, :Status)
     end
 end

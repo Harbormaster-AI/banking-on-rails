@@ -1,50 +1,50 @@
 
 class ExternalAccountsController < ApplicationController
   def index
-    @externalAccounts = ExternalAccount.all
+    @_external_accounts = ExternalAccount.all
   end
  
   def find
-    @externalAccount = ExternalAccount.find(params[:id])
+    @_external_account = ExternalAccount.find(params[:id])
   end
  
   def new
-    @externalAccount = ExternalAccount.new
+    @_external_account = ExternalAccount.new
   end
  
   def edit
-    @externalAccount = ExternalAccount.find(params[:id])
+    @_external_account = ExternalAccount.find(params[:id])
   end
  
   def create
-    @externalAccount = ExternalAccount.new(externalAccount_params)
+    @_external_account = ExternalAccount.new(_external_account_params)
  
-    if @externalAccount.save
-      redirect_to externalAccounts_path
+    if @_external_account.save
+      redirect_to _external_accounts_path
     else
       render 'new'
     end
   end
  
   def update
-    @externalAccount = ExternalAccount.find(params[:id])
+    @_external_account = ExternalAccount.find(params[:id])
  
-    if @externalAccount.update(externalAccount_params)
-      redirect_to externalAccounts_path
+    if @_external_account.update(_external_account_params)
+      redirect_to _external_accounts_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @externalAccount = ExternalAccount.find(params[:id])
-    @externalAccount.destroy
-    redirect_to externalAccounts_path
+    @_external_account = ExternalAccount.find(params[:id])
+    @_external_account.destroy
+    redirect_to _external_accounts_path
   end
 
  
   private
-    def externalAccount_params
-      params.require(:externalAccount).permit(:name, :iban, :accountNumber, :bic, :bankName, :country)
+    def _external_account_params
+      params.require(:_external_account).permit(:name, :iban, :accountNumber, :bic, :bankName, :country)
     end
 end

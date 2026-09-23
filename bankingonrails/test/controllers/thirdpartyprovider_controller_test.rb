@@ -14,7 +14,9 @@ class ThirdPartyProviderControllerTest < ActionDispatch::IntegrationTest
 
   test "should create thirdPartyProvider" do
     assert_difference("ThirdPartyProvider.count") do
-      post thirdPartyProviders_url, params: { thirdPartyProvider: { name:"test string for name", registrationId:"test string for registrationId", website:"test string for website" } }
+      post thirdPartyProviders_url, params: { thirdPartyProvider: {
+                        website:"test string for website"
+ } }
     end
 
     assert_redirected_to thirdPartyProviders_url

@@ -1,50 +1,50 @@
 
 class ConsentsController < ApplicationController
   def index
-    @consents = Consent.all
+    @_consents = Consent.all
   end
  
   def find
-    @consent = Consent.find(params[:id])
+    @_consent = Consent.find(params[:id])
   end
  
   def new
-    @consent = Consent.new
+    @_consent = Consent.new
   end
  
   def edit
-    @consent = Consent.find(params[:id])
+    @_consent = Consent.find(params[:id])
   end
  
   def create
-    @consent = Consent.new(consent_params)
+    @_consent = Consent.new(_consent_params)
  
-    if @consent.save
-      redirect_to consents_path
+    if @_consent.save
+      redirect_to _consents_path
     else
       render 'new'
     end
   end
  
   def update
-    @consent = Consent.find(params[:id])
+    @_consent = Consent.find(params[:id])
  
-    if @consent.update(consent_params)
-      redirect_to consents_path
+    if @_consent.update(_consent_params)
+      redirect_to _consents_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @consent = Consent.find(params[:id])
-    @consent.destroy
-    redirect_to consents_path
+    @_consent = Consent.find(params[:id])
+    @_consent.destroy
+    redirect_to _consents_path
   end
 
  
   private
-    def consent_params
-      params.require(:consent).permit(:grantedOn, :expiresOn, :ConsentType, :Status)
+    def _consent_params
+      params.require(:_consent).permit(:grantedOn, :expiresOn, :ConsentType, :Status)
     end
 end

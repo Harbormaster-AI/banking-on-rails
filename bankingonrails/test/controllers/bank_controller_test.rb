@@ -14,7 +14,9 @@ class BankControllerTest < ActionDispatch::IntegrationTest
 
   test "should create bank" do
     assert_difference("Bank.count") do
-      post banks_url, params: { bank: { name:"test string for name", legalName:"test string for legalName", swiftBic:"test value", headquartersCountry:"test string for headquartersCountry", website:"test string for website" } }
+      post banks_url, params: { bank: {
+                        website:"test string for website"
+ } }
     end
 
     assert_redirected_to banks_url

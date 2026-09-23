@@ -1,29 +1,29 @@
 
 class LoanAccount < ApplicationRecord
-  enum LoanType: [:Mortgage, :Personal, :Auto, :SmallBusiness, :CreditLine, :Student]
-  enum RateType: [:Fixed, :Variable]
-  enum Compounding: [:Daily, :Monthly, :Quarterly, :Annually]
-  enum Status: [:Applied, :Approved, :Active, :Delinquent, :Defaulted, :Closed]
+  enum _LOAN_TYPE: [:Mortgage, :Personal, :Auto, :SmallBusiness, :CreditLine, :Student]
+  enum _RATE_TYPE: [:Fixed, :Variable]
+  enum _COMPOUNDING: [:Daily, :Monthly, :Quarterly, :Annually]
+  enum _STATUS: [:Applied, :Approved, :Active, :Delinquent, :Defaulted, :Closed]
 
 
-  composed_of :money,
+  composed_of :_money,
     class_name: "Money",
     mapping: [
       ${$mapping}, 
-      %w[money_currency currency]
+      %w[_money_currency currency]
     ]
 
-  composed_of :money,
+  composed_of :_money,
     class_name: "Money",
     mapping: [
       ${$mapping}, 
-      %w[money_currency currency]
+      %w[_money_currency currency]
     ]
 
-  composed_of :percentage,
+  composed_of :_percentage,
     class_name: "Percentage",
     mapping: [
-      %w[percentage_value value]
+      %w[_percentage_value value]
     ]
 
   has_many :Bank, class_name: 'Bank'

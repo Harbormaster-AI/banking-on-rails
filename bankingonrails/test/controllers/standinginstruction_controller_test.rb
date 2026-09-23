@@ -14,7 +14,9 @@ class StandingInstructionControllerTest < ActionDispatch::IntegrationTest
 
   test "should create standingInstruction" do
     assert_difference("StandingInstruction.count") do
-      post standingInstructions_url, params: { standingInstruction: { instructionId:"test string for instructionId", amount:"test value", nextExecutionDate:1.week.ago, Frequency:StandingInstruction.Frequencys[0], Status:StandingInstruction.Statuss[0] } }
+      post standingInstructions_url, params: { standingInstruction: {
+                        Status:StandingInstruction.Statuss[0]
+ } }
     end
 
     assert_redirected_to standingInstructions_url

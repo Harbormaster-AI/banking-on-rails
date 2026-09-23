@@ -14,7 +14,9 @@ class ConsentControllerTest < ActionDispatch::IntegrationTest
 
   test "should create consent" do
     assert_difference("Consent.count") do
-      post consents_url, params: { consent: { grantedOn:1.week.ago, expiresOn:1.week.ago, ConsentType:Consent.ConsentTypes[0], Status:Consent.Statuss[0] } }
+      post consents_url, params: { consent: {
+                        Status:Consent.Statuss[0]
+ } }
     end
 
     assert_redirected_to consents_url

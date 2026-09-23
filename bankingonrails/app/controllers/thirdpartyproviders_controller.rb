@@ -1,50 +1,50 @@
 
 class ThirdPartyProvidersController < ApplicationController
   def index
-    @thirdPartyProviders = ThirdPartyProvider.all
+    @_third_party_providers = ThirdPartyProvider.all
   end
  
   def find
-    @thirdPartyProvider = ThirdPartyProvider.find(params[:id])
+    @_third_party_provider = ThirdPartyProvider.find(params[:id])
   end
  
   def new
-    @thirdPartyProvider = ThirdPartyProvider.new
+    @_third_party_provider = ThirdPartyProvider.new
   end
  
   def edit
-    @thirdPartyProvider = ThirdPartyProvider.find(params[:id])
+    @_third_party_provider = ThirdPartyProvider.find(params[:id])
   end
  
   def create
-    @thirdPartyProvider = ThirdPartyProvider.new(thirdPartyProvider_params)
+    @_third_party_provider = ThirdPartyProvider.new(_third_party_provider_params)
  
-    if @thirdPartyProvider.save
-      redirect_to thirdPartyProviders_path
+    if @_third_party_provider.save
+      redirect_to _third_party_providers_path
     else
       render 'new'
     end
   end
  
   def update
-    @thirdPartyProvider = ThirdPartyProvider.find(params[:id])
+    @_third_party_provider = ThirdPartyProvider.find(params[:id])
  
-    if @thirdPartyProvider.update(thirdPartyProvider_params)
-      redirect_to thirdPartyProviders_path
+    if @_third_party_provider.update(_third_party_provider_params)
+      redirect_to _third_party_providers_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @thirdPartyProvider = ThirdPartyProvider.find(params[:id])
-    @thirdPartyProvider.destroy
-    redirect_to thirdPartyProviders_path
+    @_third_party_provider = ThirdPartyProvider.find(params[:id])
+    @_third_party_provider.destroy
+    redirect_to _third_party_providers_path
   end
 
  
   private
-    def thirdPartyProvider_params
-      params.require(:thirdPartyProvider).permit(:name, :registrationId, :website)
+    def _third_party_provider_params
+      params.require(:_third_party_provider).permit(:name, :registrationId, :website)
     end
 end

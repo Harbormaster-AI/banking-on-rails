@@ -14,7 +14,9 @@ class LoanAccountControllerTest < ActionDispatch::IntegrationTest
 
   test "should create loanAccount" do
     assert_difference("LoanAccount.count") do
-      post loanAccounts_url, params: { loanAccount: { loanNumber:"test string for loanNumber", principalAmount:"test value", outstandingPrincipal:"test value", interestRate:"test value", originationDate:1.week.ago, maturityDate:1.week.ago, paymentDayOfMonth:100, currency:"test string for currency", LoanType:LoanAccount.LoanTypes[0], RateType:LoanAccount.RateTypes[0], Compounding:LoanAccount.Compoundings[0], Status:LoanAccount.Statuss[0] } }
+      post loanAccounts_url, params: { loanAccount: {
+                        Status:LoanAccount.Statuss[0]
+ } }
     end
 
     assert_redirected_to loanAccounts_url

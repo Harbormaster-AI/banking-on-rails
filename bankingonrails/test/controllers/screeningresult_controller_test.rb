@@ -14,7 +14,9 @@ class ScreeningResultControllerTest < ActionDispatch::IntegrationTest
 
   test "should create screeningResult" do
     assert_difference("ScreeningResult.count") do
-      post screeningResults_url, params: { screeningResult: { screeningDate:1.week.ago, provider:"test string for provider", Outcome:ScreeningResult.Outcomes[0] } }
+      post screeningResults_url, params: { screeningResult: {
+                        Outcome:ScreeningResult.Outcomes[0]
+ } }
     end
 
     assert_redirected_to screeningResults_url

@@ -1,6 +1,6 @@
 
 class IdentityDocument < ApplicationRecord
-  enum DocumentType: [:Passport, :NationalID, :DriverLicense, :ResidencePermit, :BusinessRegistration, :TaxCertificate]
+  enum _DOCUMENT_TYPE: [:Passport, :NationalID, :DriverLicense, :ResidencePermit, :BusinessRegistration, :TaxCertificate]
 
 
   has_many :KycProfile, class_name: 'KycProfile'

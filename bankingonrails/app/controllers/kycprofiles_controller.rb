@@ -1,50 +1,50 @@
 
 class KycProfilesController < ApplicationController
   def index
-    @kycProfiles = KycProfile.all
+    @_kyc_profiles = KycProfile.all
   end
  
   def find
-    @kycProfile = KycProfile.find(params[:id])
+    @_kyc_profile = KycProfile.find(params[:id])
   end
  
   def new
-    @kycProfile = KycProfile.new
+    @_kyc_profile = KycProfile.new
   end
  
   def edit
-    @kycProfile = KycProfile.find(params[:id])
+    @_kyc_profile = KycProfile.find(params[:id])
   end
  
   def create
-    @kycProfile = KycProfile.new(kycProfile_params)
+    @_kyc_profile = KycProfile.new(_kyc_profile_params)
  
-    if @kycProfile.save
-      redirect_to kycProfiles_path
+    if @_kyc_profile.save
+      redirect_to _kyc_profiles_path
     else
       render 'new'
     end
   end
  
   def update
-    @kycProfile = KycProfile.find(params[:id])
+    @_kyc_profile = KycProfile.find(params[:id])
  
-    if @kycProfile.update(kycProfile_params)
-      redirect_to kycProfiles_path
+    if @_kyc_profile.update(_kyc_profile_params)
+      redirect_to _kyc_profiles_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @kycProfile = KycProfile.find(params[:id])
-    @kycProfile.destroy
-    redirect_to kycProfiles_path
+    @_kyc_profile = KycProfile.find(params[:id])
+    @_kyc_profile.destroy
+    redirect_to _kyc_profiles_path
   end
 
  
   private
-    def kycProfile_params
-      params.require(:kycProfile).permit(:profileId, :lastReviewedOn, :Status)
+    def _kyc_profile_params
+      params.require(:_kyc_profile).permit(:profileId, :lastReviewedOn, :Status)
     end
 end

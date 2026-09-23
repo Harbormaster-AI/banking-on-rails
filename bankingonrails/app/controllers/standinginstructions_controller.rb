@@ -1,50 +1,50 @@
 
 class StandingInstructionsController < ApplicationController
   def index
-    @standingInstructions = StandingInstruction.all
+    @_standing_instructions = StandingInstruction.all
   end
  
   def find
-    @standingInstruction = StandingInstruction.find(params[:id])
+    @_standing_instruction = StandingInstruction.find(params[:id])
   end
  
   def new
-    @standingInstruction = StandingInstruction.new
+    @_standing_instruction = StandingInstruction.new
   end
  
   def edit
-    @standingInstruction = StandingInstruction.find(params[:id])
+    @_standing_instruction = StandingInstruction.find(params[:id])
   end
  
   def create
-    @standingInstruction = StandingInstruction.new(standingInstruction_params)
+    @_standing_instruction = StandingInstruction.new(_standing_instruction_params)
  
-    if @standingInstruction.save
-      redirect_to standingInstructions_path
+    if @_standing_instruction.save
+      redirect_to _standing_instructions_path
     else
       render 'new'
     end
   end
  
   def update
-    @standingInstruction = StandingInstruction.find(params[:id])
+    @_standing_instruction = StandingInstruction.find(params[:id])
  
-    if @standingInstruction.update(standingInstruction_params)
-      redirect_to standingInstructions_path
+    if @_standing_instruction.update(_standing_instruction_params)
+      redirect_to _standing_instructions_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @standingInstruction = StandingInstruction.find(params[:id])
-    @standingInstruction.destroy
-    redirect_to standingInstructions_path
+    @_standing_instruction = StandingInstruction.find(params[:id])
+    @_standing_instruction.destroy
+    redirect_to _standing_instructions_path
   end
 
  
   private
-    def standingInstruction_params
-      params.require(:standingInstruction).permit(:instructionId, :amount, :nextExecutionDate, :Frequency, :Status)
+    def _standing_instruction_params
+      params.require(:_standing_instruction).permit(:instructionId, :amount, :nextExecutionDate, :Frequency, :Status)
     end
 end

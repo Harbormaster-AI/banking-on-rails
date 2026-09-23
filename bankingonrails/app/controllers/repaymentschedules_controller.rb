@@ -1,50 +1,50 @@
 
 class RepaymentSchedulesController < ApplicationController
   def index
-    @repaymentSchedules = RepaymentSchedule.all
+    @_repayment_schedules = RepaymentSchedule.all
   end
  
   def find
-    @repaymentSchedule = RepaymentSchedule.find(params[:id])
+    @_repayment_schedule = RepaymentSchedule.find(params[:id])
   end
  
   def new
-    @repaymentSchedule = RepaymentSchedule.new
+    @_repayment_schedule = RepaymentSchedule.new
   end
  
   def edit
-    @repaymentSchedule = RepaymentSchedule.find(params[:id])
+    @_repayment_schedule = RepaymentSchedule.find(params[:id])
   end
  
   def create
-    @repaymentSchedule = RepaymentSchedule.new(repaymentSchedule_params)
+    @_repayment_schedule = RepaymentSchedule.new(_repayment_schedule_params)
  
-    if @repaymentSchedule.save
-      redirect_to repaymentSchedules_path
+    if @_repayment_schedule.save
+      redirect_to _repayment_schedules_path
     else
       render 'new'
     end
   end
  
   def update
-    @repaymentSchedule = RepaymentSchedule.find(params[:id])
+    @_repayment_schedule = RepaymentSchedule.find(params[:id])
  
-    if @repaymentSchedule.update(repaymentSchedule_params)
-      redirect_to repaymentSchedules_path
+    if @_repayment_schedule.update(_repayment_schedule_params)
+      redirect_to _repayment_schedules_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @repaymentSchedule = RepaymentSchedule.find(params[:id])
-    @repaymentSchedule.destroy
-    redirect_to repaymentSchedules_path
+    @_repayment_schedule = RepaymentSchedule.find(params[:id])
+    @_repayment_schedule.destroy
+    redirect_to _repayment_schedules_path
   end
 
  
   private
-    def repaymentSchedule_params
-      params.require(:repaymentSchedule).permit(:installmentNumber, :dueDate, :principalDue, :interestDue, :totalDue, :Status)
+    def _repayment_schedule_params
+      params.require(:_repayment_schedule).permit(:installmentNumber, :dueDate, :principalDue, :interestDue, :totalDue, :Status)
     end
 end

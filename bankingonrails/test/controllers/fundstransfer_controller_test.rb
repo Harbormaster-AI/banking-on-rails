@@ -14,7 +14,9 @@ class FundsTransferControllerTest < ActionDispatch::IntegrationTest
 
   test "should create fundsTransfer" do
     assert_difference("FundsTransfer.count") do
-      post fundsTransfers_url, params: { fundsTransfer: { transferReference:"test string for transferReference", amount:"test value", requestedDate:1.week.ago, executionDate:1.week.ago, purpose:"test string for purpose", feeAmount:"test value", Method:FundsTransfer.Methods[0], Status:FundsTransfer.Statuss[0] } }
+      post fundsTransfers_url, params: { fundsTransfer: {
+                        Status:FundsTransfer.Statuss[0]
+ } }
     end
 
     assert_redirected_to fundsTransfers_url

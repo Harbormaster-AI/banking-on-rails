@@ -1,18 +1,18 @@
 
 class Customer < ApplicationRecord
-  enum CustomerType: [:Individual, :Business, :NonProfit, :Government]
-  enum RiskRating: [:Low, :Medium, :High]
-  enum KycStatus: [:Pending, :Verified, :Rejected, :Expired]
+  enum _CUSTOMER_TYPE: [:Individual, :Business, :NonProfit, :Government]
+  enum _RISK_RATING: [:Low, :Medium, :High]
+  enum _KYC_STATUS: [:Pending, :Verified, :Rejected, :Expired]
 
 
-  composed_of :address,
+  composed_of :_address,
     class_name: "Address",
     mapping: [
       ${$mapping}, 
       ${$mapping}, 
       ${$mapping}, 
       ${$mapping}, 
-      %w[address_country country]
+      %w[_address_country country]
     ]
 
   has_many :Bank, class_name: 'Bank'

@@ -1,50 +1,50 @@
 
 class FeeChargesController < ApplicationController
   def index
-    @feeCharges = FeeCharge.all
+    @_fee_charges = FeeCharge.all
   end
  
   def find
-    @feeCharge = FeeCharge.find(params[:id])
+    @_fee_charge = FeeCharge.find(params[:id])
   end
  
   def new
-    @feeCharge = FeeCharge.new
+    @_fee_charge = FeeCharge.new
   end
  
   def edit
-    @feeCharge = FeeCharge.find(params[:id])
+    @_fee_charge = FeeCharge.find(params[:id])
   end
  
   def create
-    @feeCharge = FeeCharge.new(feeCharge_params)
+    @_fee_charge = FeeCharge.new(_fee_charge_params)
  
-    if @feeCharge.save
-      redirect_to feeCharges_path
+    if @_fee_charge.save
+      redirect_to _fee_charges_path
     else
       render 'new'
     end
   end
  
   def update
-    @feeCharge = FeeCharge.find(params[:id])
+    @_fee_charge = FeeCharge.find(params[:id])
  
-    if @feeCharge.update(feeCharge_params)
-      redirect_to feeCharges_path
+    if @_fee_charge.update(_fee_charge_params)
+      redirect_to _fee_charges_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @feeCharge = FeeCharge.find(params[:id])
-    @feeCharge.destroy
-    redirect_to feeCharges_path
+    @_fee_charge = FeeCharge.find(params[:id])
+    @_fee_charge.destroy
+    redirect_to _fee_charges_path
   end
 
  
   private
-    def feeCharge_params
-      params.require(:feeCharge).permit(:feeCode, :amount, :appliedOn, :FeeType)
+    def _fee_charge_params
+      params.require(:_fee_charge).permit(:feeCode, :amount, :appliedOn, :FeeType)
     end
 end

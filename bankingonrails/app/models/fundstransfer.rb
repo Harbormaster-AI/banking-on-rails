@@ -1,21 +1,21 @@
 
 class FundsTransfer < ApplicationRecord
-  enum Method: [:InternalTransfer, :ACH, :Wire, :SEPA, :SWIFT, :Card, :Cash, :Check, :MobileWallet]
-  enum Status: [:Initiated, :InProcess, :Settled, :Failed, :Reversed, :Cancelled]
+  enum _METHOD: [:InternalTransfer, :ACH, :Wire, :SEPA, :SWIFT, :Card, :Cash, :Check, :MobileWallet]
+  enum _STATUS: [:Initiated, :InProcess, :Settled, :Failed, :Reversed, :Cancelled]
 
 
-  composed_of :money,
+  composed_of :_money,
     class_name: "Money",
     mapping: [
       ${$mapping}, 
-      %w[money_currency currency]
+      %w[_money_currency currency]
     ]
 
-  composed_of :money,
+  composed_of :_money,
     class_name: "Money",
     mapping: [
       ${$mapping}, 
-      %w[money_currency currency]
+      %w[_money_currency currency]
     ]
 
   has_many :SourceAccount, class_name: 'Account'

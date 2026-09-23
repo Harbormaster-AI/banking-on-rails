@@ -2,14 +2,14 @@
 class Branch < ApplicationRecord
 
 
-  composed_of :address,
+  composed_of :_address,
     class_name: "Address",
     mapping: [
       ${$mapping}, 
       ${$mapping}, 
       ${$mapping}, 
       ${$mapping}, 
-      %w[address_country country]
+      %w[_address_country country]
     ]
 
   has_many :Bank, class_name: 'Bank'

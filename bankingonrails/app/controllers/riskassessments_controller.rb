@@ -1,50 +1,50 @@
 
 class RiskAssessmentsController < ApplicationController
   def index
-    @riskAssessments = RiskAssessment.all
+    @_risk_assessments = RiskAssessment.all
   end
  
   def find
-    @riskAssessment = RiskAssessment.find(params[:id])
+    @_risk_assessment = RiskAssessment.find(params[:id])
   end
  
   def new
-    @riskAssessment = RiskAssessment.new
+    @_risk_assessment = RiskAssessment.new
   end
  
   def edit
-    @riskAssessment = RiskAssessment.find(params[:id])
+    @_risk_assessment = RiskAssessment.find(params[:id])
   end
  
   def create
-    @riskAssessment = RiskAssessment.new(riskAssessment_params)
+    @_risk_assessment = RiskAssessment.new(_risk_assessment_params)
  
-    if @riskAssessment.save
-      redirect_to riskAssessments_path
+    if @_risk_assessment.save
+      redirect_to _risk_assessments_path
     else
       render 'new'
     end
   end
  
   def update
-    @riskAssessment = RiskAssessment.find(params[:id])
+    @_risk_assessment = RiskAssessment.find(params[:id])
  
-    if @riskAssessment.update(riskAssessment_params)
-      redirect_to riskAssessments_path
+    if @_risk_assessment.update(_risk_assessment_params)
+      redirect_to _risk_assessments_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @riskAssessment = RiskAssessment.find(params[:id])
-    @riskAssessment.destroy
-    redirect_to riskAssessments_path
+    @_risk_assessment = RiskAssessment.find(params[:id])
+    @_risk_assessment.destroy
+    redirect_to _risk_assessments_path
   end
 
  
   private
-    def riskAssessment_params
-      params.require(:riskAssessment).permit(:score, :assessedOn, :Rating)
+    def _risk_assessment_params
+      params.require(:_risk_assessment).permit(:score, :assessedOn, :Rating)
     end
 end

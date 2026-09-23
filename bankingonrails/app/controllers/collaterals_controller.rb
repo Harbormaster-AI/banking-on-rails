@@ -1,50 +1,50 @@
 
 class CollateralsController < ApplicationController
   def index
-    @collaterals = Collateral.all
+    @_collaterals = Collateral.all
   end
  
   def find
-    @collateral = Collateral.find(params[:id])
+    @_collateral = Collateral.find(params[:id])
   end
  
   def new
-    @collateral = Collateral.new
+    @_collateral = Collateral.new
   end
  
   def edit
-    @collateral = Collateral.find(params[:id])
+    @_collateral = Collateral.find(params[:id])
   end
  
   def create
-    @collateral = Collateral.new(collateral_params)
+    @_collateral = Collateral.new(_collateral_params)
  
-    if @collateral.save
-      redirect_to collaterals_path
+    if @_collateral.save
+      redirect_to _collaterals_path
     else
       render 'new'
     end
   end
  
   def update
-    @collateral = Collateral.find(params[:id])
+    @_collateral = Collateral.find(params[:id])
  
-    if @collateral.update(collateral_params)
-      redirect_to collaterals_path
+    if @_collateral.update(_collateral_params)
+      redirect_to _collaterals_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @collateral = Collateral.find(params[:id])
-    @collateral.destroy
-    redirect_to collaterals_path
+    @_collateral = Collateral.find(params[:id])
+    @_collateral.destroy
+    redirect_to _collaterals_path
   end
 
  
   private
-    def collateral_params
-      params.require(:collateral).permit(:collateralIdentifier, :appraisedValue, :description, :location, :CollateralType)
+    def _collateral_params
+      params.require(:_collateral).permit(:collateralIdentifier, :appraisedValue, :description, :location, :CollateralType)
     end
 end

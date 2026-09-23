@@ -1,50 +1,50 @@
 
 class FundsTransfersController < ApplicationController
   def index
-    @fundsTransfers = FundsTransfer.all
+    @_funds_transfers = FundsTransfer.all
   end
  
   def find
-    @fundsTransfer = FundsTransfer.find(params[:id])
+    @_funds_transfer = FundsTransfer.find(params[:id])
   end
  
   def new
-    @fundsTransfer = FundsTransfer.new
+    @_funds_transfer = FundsTransfer.new
   end
  
   def edit
-    @fundsTransfer = FundsTransfer.find(params[:id])
+    @_funds_transfer = FundsTransfer.find(params[:id])
   end
  
   def create
-    @fundsTransfer = FundsTransfer.new(fundsTransfer_params)
+    @_funds_transfer = FundsTransfer.new(_funds_transfer_params)
  
-    if @fundsTransfer.save
-      redirect_to fundsTransfers_path
+    if @_funds_transfer.save
+      redirect_to _funds_transfers_path
     else
       render 'new'
     end
   end
  
   def update
-    @fundsTransfer = FundsTransfer.find(params[:id])
+    @_funds_transfer = FundsTransfer.find(params[:id])
  
-    if @fundsTransfer.update(fundsTransfer_params)
-      redirect_to fundsTransfers_path
+    if @_funds_transfer.update(_funds_transfer_params)
+      redirect_to _funds_transfers_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @fundsTransfer = FundsTransfer.find(params[:id])
-    @fundsTransfer.destroy
-    redirect_to fundsTransfers_path
+    @_funds_transfer = FundsTransfer.find(params[:id])
+    @_funds_transfer.destroy
+    redirect_to _funds_transfers_path
   end
 
  
   private
-    def fundsTransfer_params
-      params.require(:fundsTransfer).permit(:transferReference, :amount, :requestedDate, :executionDate, :purpose, :feeAmount, :Method, :Status)
+    def _funds_transfer_params
+      params.require(:_funds_transfer).permit(:transferReference, :amount, :requestedDate, :executionDate, :purpose, :feeAmount, :Method, :Status)
     end
 end

@@ -1,50 +1,50 @@
 
 class CustomersController < ApplicationController
   def index
-    @customers = Customer.all
+    @_customers = Customer.all
   end
  
   def find
-    @customer = Customer.find(params[:id])
+    @_customer = Customer.find(params[:id])
   end
  
   def new
-    @customer = Customer.new
+    @_customer = Customer.new
   end
  
   def edit
-    @customer = Customer.find(params[:id])
+    @_customer = Customer.find(params[:id])
   end
  
   def create
-    @customer = Customer.new(customer_params)
+    @_customer = Customer.new(_customer_params)
  
-    if @customer.save
-      redirect_to customers_path
+    if @_customer.save
+      redirect_to _customers_path
     else
       render 'new'
     end
   end
  
   def update
-    @customer = Customer.find(params[:id])
+    @_customer = Customer.find(params[:id])
  
-    if @customer.update(customer_params)
-      redirect_to customers_path
+    if @_customer.update(_customer_params)
+      redirect_to _customers_path
     else
       render 'edit'
     end
   end
  
   def destroy
-    @customer = Customer.find(params[:id])
-    @customer.destroy
-    redirect_to customers_path
+    @_customer = Customer.find(params[:id])
+    @_customer.destroy
+    redirect_to _customers_path
   end
 
  
   private
-    def customer_params
-      params.require(:customer).permit(:firstName, :lastName, :legalName, :dateOfBirth, :taxId, :email, :phone, :address, :CustomerType, :RiskRating, :KycStatus)
+    def _customer_params
+      params.require(:_customer).permit(:firstName, :lastName, :legalName, :dateOfBirth, :taxId, :email, :phone, :address, :CustomerType, :RiskRating, :KycStatus)
     end
 end

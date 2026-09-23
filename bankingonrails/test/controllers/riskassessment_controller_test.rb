@@ -14,7 +14,9 @@ class RiskAssessmentControllerTest < ActionDispatch::IntegrationTest
 
   test "should create riskAssessment" do
     assert_difference("RiskAssessment.count") do
-      post riskAssessments_url, params: { riskAssessment: { score:100, assessedOn:1.week.ago, Rating:RiskAssessment.Ratings[0] } }
+      post riskAssessments_url, params: { riskAssessment: {
+                        Rating:RiskAssessment.Ratings[0]
+ } }
     end
 
     assert_redirected_to riskAssessments_url

@@ -14,7 +14,9 @@ class DisputeControllerTest < ActionDispatch::IntegrationTest
 
   test "should create dispute" do
     assert_difference("Dispute.count") do
-      post disputes_url, params: { dispute: { disputeReference:"test string for disputeReference", raisedOn:1.week.ago, reason:"test string for reason", Status:Dispute.Statuss[0] } }
+      post disputes_url, params: { dispute: {
+                        Status:Dispute.Statuss[0]
+ } }
     end
 
     assert_redirected_to disputes_url

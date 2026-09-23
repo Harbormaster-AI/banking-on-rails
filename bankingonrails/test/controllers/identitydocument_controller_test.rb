@@ -14,7 +14,9 @@ class IdentityDocumentControllerTest < ActionDispatch::IntegrationTest
 
   test "should create identityDocument" do
     assert_difference("IdentityDocument.count") do
-      post identityDocuments_url, params: { identityDocument: { documentNumber:"test string for documentNumber", issuingCountry:"test string for issuingCountry", expirationDate:1.week.ago, DocumentType:IdentityDocument.DocumentTypes[0] } }
+      post identityDocuments_url, params: { identityDocument: {
+                        DocumentType:IdentityDocument.DocumentTypes[0]
+ } }
     end
 
     assert_redirected_to identityDocuments_url

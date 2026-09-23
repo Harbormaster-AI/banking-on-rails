@@ -1,14 +1,14 @@
 
 class StandingInstruction < ApplicationRecord
-  enum Frequency: [:OneTime, :Weekly, :BiWeekly, :Monthly, :Quarterly, :Annually]
-  enum Status: [:Active, :Paused, :Cancelled, :Completed]
+  enum _FREQUENCY: [:OneTime, :Weekly, :BiWeekly, :Monthly, :Quarterly, :Annually]
+  enum _STATUS: [:Active, :Paused, :Cancelled, :Completed]
 
 
-  composed_of :money,
+  composed_of :_money,
     class_name: "Money",
     mapping: [
       ${$mapping}, 
-      %w[money_currency currency]
+      %w[_money_currency currency]
     ]
 
   has_many :Account, class_name: 'Account'

@@ -14,7 +14,9 @@ class RepaymentScheduleControllerTest < ActionDispatch::IntegrationTest
 
   test "should create repaymentSchedule" do
     assert_difference("RepaymentSchedule.count") do
-      post repaymentSchedules_url, params: { repaymentSchedule: { installmentNumber:100, dueDate:1.week.ago, principalDue:"test value", interestDue:"test value", totalDue:"test value", Status:RepaymentSchedule.Statuss[0] } }
+      post repaymentSchedules_url, params: { repaymentSchedule: {
+                        Status:RepaymentSchedule.Statuss[0]
+ } }
     end
 
     assert_redirected_to repaymentSchedules_url

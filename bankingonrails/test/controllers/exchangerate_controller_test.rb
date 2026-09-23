@@ -14,7 +14,9 @@ class ExchangeRateControllerTest < ActionDispatch::IntegrationTest
 
   test "should create exchangeRate" do
     assert_difference("ExchangeRate.count") do
-      post exchangeRates_url, params: { exchangeRate: { baseCurrency:"test string for baseCurrency", counterCurrency:"test string for counterCurrency", rate:"test value", asOf:1.week.ago, source:"test string for source" } }
+      post exchangeRates_url, params: { exchangeRate: {
+                        source:"test string for source"
+ } }
     end
 
     assert_redirected_to exchangeRates_url
