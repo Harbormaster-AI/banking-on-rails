@@ -12,7 +12,7 @@ provider "aws" {
       CreatedBy = "Harbormaster"
       Blueprint = "RubyonRails"
       DomainModel = "Banking Industry Domain Model"
-      CertificationId = "ebe8c92f-7734-43c2-a8bf-2f72b3b4eaa5"
+      CertificationId = "57c5a679-a1d1-4f90-8425-71e5dd3ec54a"
     }
   }
 }
@@ -39,7 +39,7 @@ resource "local_file" "private_key_pem" {
 }
 
 resource "aws_key_pair" "generated" {
-  key_name   = "pjsk-sshtest-0.09700133095242525"
+  key_name   = "pjsk-sshtest-0.2263443848995338"
   public_key = tls_private_key.generated.public_key_openssh
 
   lifecycle {
