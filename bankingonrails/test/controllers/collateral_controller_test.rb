@@ -15,7 +15,12 @@ class CollateralControllerTest < ActionDispatch::IntegrationTest
   test "should create collateral" do
     assert_difference("Collateral.count") do
       post collaterals_url, params: { collateral: {
-        collateral_type:Collateral.CollateralTypes[0] } }
+        collateral_identifier:"test string for collateralIdentifier", 
+appraised_value:"test value", 
+description:"test string for description", 
+location:"test value", 
+collateral_type:Collateral.CollateralTypes[0]
+ } }
     end
 
     assert_redirected_to collaterals_url

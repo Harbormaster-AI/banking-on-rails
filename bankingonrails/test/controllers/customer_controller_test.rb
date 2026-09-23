@@ -15,7 +15,18 @@ class CustomerControllerTest < ActionDispatch::IntegrationTest
   test "should create customer" do
     assert_difference("Customer.count") do
       post customers_url, params: { customer: {
-        kyc_status:Customer.KycStatuss[0] } }
+        first_name:"test string for firstName", 
+last_name:"test string for lastName", 
+legal_name:"test string for legalName", 
+date_of_birth:1.week.ago, 
+tax_id:"test string for taxId", 
+email:"test string for email", 
+phone:"test string for phone", 
+address:"test value", 
+customer_type:Customer.CustomerTypes[0], 
+risk_rating:Customer.RiskRatings[0], 
+kyc_status:Customer.KycStatuss[0]
+ } }
     end
 
     assert_redirected_to customers_url

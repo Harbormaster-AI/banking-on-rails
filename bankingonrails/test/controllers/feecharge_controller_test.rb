@@ -15,7 +15,11 @@ class FeeChargeControllerTest < ActionDispatch::IntegrationTest
   test "should create fee_charge" do
     assert_difference("FeeCharge.count") do
       post fee_charges_url, params: { fee_charge: {
-        fee_type:FeeCharge.FeeTypes[0] } }
+        fee_code:"test string for feeCode", 
+amount:"test value", 
+applied_on:1.week.ago, 
+fee_type:FeeCharge.FeeTypes[0]
+ } }
     end
 
     assert_redirected_to fee_charges_url

@@ -15,7 +15,13 @@ class ExternalAccountControllerTest < ActionDispatch::IntegrationTest
   test "should create external_account" do
     assert_difference("ExternalAccount.count") do
       post external_accounts_url, params: { external_account: {
-        country:"test string for country" } }
+        name:"test string for name", 
+iban:"test value", 
+account_number:"test value", 
+bic:"test value", 
+bank_name:"test string for bankName", 
+country:"test string for country"
+ } }
     end
 
     assert_redirected_to external_accounts_url

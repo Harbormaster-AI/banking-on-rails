@@ -15,7 +15,14 @@ class FXTradeControllerTest < ActionDispatch::IntegrationTest
   test "should create f_x_trade" do
     assert_difference("FXTrade.count") do
       post f_x_trades_url, params: { f_x_trade: {
-        status:FXTrade.Statuss[0] } }
+        trade_reference:"test string for tradeReference", 
+trade_date:1.week.ago, 
+settlement_date:1.week.ago, 
+amount_sold:"test value", 
+amount_bought:"test value", 
+rate:"test value", 
+status:FXTrade.Statuss[0]
+ } }
     end
 
     assert_redirected_to f_x_trades_url
