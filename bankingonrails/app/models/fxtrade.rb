@@ -6,14 +6,14 @@ class FXTrade < ApplicationRecord
   composed_of :_money,
     class_name: "Money",
     mapping: [
-      ${$mapping}, 
+      %w[_money_amount amount], 
       %w[_money_currency currency]
     ]
 
   composed_of :_money,
     class_name: "Money",
     mapping: [
-      ${$mapping}, 
+      %w[_money_amount amount], 
       %w[_money_currency currency]
     ]
 
