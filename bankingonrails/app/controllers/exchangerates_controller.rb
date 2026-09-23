@@ -4,7 +4,7 @@ class ExchangeRatesController < ApplicationController
     @exchangeRates = ExchangeRate.all
   end
  
-  def show
+  def find
     @exchangeRate = ExchangeRate.find(params[:id])
   end
  

@@ -4,7 +4,7 @@ class ExternalAccountsController < ApplicationController
     @externalAccounts = ExternalAccount.all
   end
  
-  def show
+  def find
     @externalAccount = ExternalAccount.find(params[:id])
   end
  

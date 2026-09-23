@@ -4,7 +4,7 @@ class PaymentCardsController < ApplicationController
     @paymentCards = PaymentCard.all
   end
  
-  def show
+  def find
     @paymentCard = PaymentCard.find(params[:id])
   end
  

@@ -4,7 +4,7 @@ class ThirdPartyProvidersController < ApplicationController
     @thirdPartyProviders = ThirdPartyProvider.all
   end
  
-  def show
+  def find
     @thirdPartyProvider = ThirdPartyProvider.find(params[:id])
   end
  

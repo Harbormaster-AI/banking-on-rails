@@ -4,7 +4,7 @@ class LoanPaymentsController < ApplicationController
     @loanPayments = LoanPayment.all
   end
  
-  def show
+  def find
     @loanPayment = LoanPayment.find(params[:id])
   end
  

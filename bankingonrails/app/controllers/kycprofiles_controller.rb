@@ -4,7 +4,7 @@ class KycProfilesController < ApplicationController
     @kycProfiles = KycProfile.all
   end
  
-  def show
+  def find
     @kycProfile = KycProfile.find(params[:id])
   end
  

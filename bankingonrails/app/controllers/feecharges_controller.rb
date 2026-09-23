@@ -4,7 +4,7 @@ class FeeChargesController < ApplicationController
     @feeCharges = FeeCharge.all
   end
  
-  def show
+  def find
     @feeCharge = FeeCharge.find(params[:id])
   end
  

@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
     @transactions = Transaction.all
   end
  
-  def show
+  def find
     @transaction = Transaction.find(params[:id])
   end
  

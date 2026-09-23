@@ -4,7 +4,7 @@ class CollateralsController < ApplicationController
     @collaterals = Collateral.all
   end
  
-  def show
+  def find
     @collateral = Collateral.find(params[:id])
   end
  

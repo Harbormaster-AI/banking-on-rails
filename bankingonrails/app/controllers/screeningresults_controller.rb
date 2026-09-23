@@ -4,7 +4,7 @@ class ScreeningResultsController < ApplicationController
     @screeningResults = ScreeningResult.all
   end
  
-  def show
+  def find
     @screeningResult = ScreeningResult.find(params[:id])
   end
  

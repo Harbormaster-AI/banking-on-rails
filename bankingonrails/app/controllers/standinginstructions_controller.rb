@@ -4,7 +4,7 @@ class StandingInstructionsController < ApplicationController
     @standingInstructions = StandingInstruction.all
   end
  
-  def show
+  def find
     @standingInstruction = StandingInstruction.find(params[:id])
   end
  

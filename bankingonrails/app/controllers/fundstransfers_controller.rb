@@ -4,7 +4,7 @@ class FundsTransfersController < ApplicationController
     @fundsTransfers = FundsTransfer.all
   end
  
-  def show
+  def find
     @fundsTransfer = FundsTransfer.find(params[:id])
   end
  

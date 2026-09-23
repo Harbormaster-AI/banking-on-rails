@@ -4,7 +4,7 @@ class BanksController < ApplicationController
     @banks = Bank.all
   end
  
-  def show
+  def find
     @bank = Bank.find(params[:id])
   end
  

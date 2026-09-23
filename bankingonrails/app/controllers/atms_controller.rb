@@ -4,7 +4,7 @@ class ATMsController < ApplicationController
     @aTMs = ATM.all
   end
  
-  def show
+  def find
     @aTM = ATM.find(params[:id])
   end
  

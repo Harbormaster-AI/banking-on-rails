@@ -4,7 +4,7 @@ class FXTradesController < ApplicationController
     @fXTrades = FXTrade.all
   end
  
-  def show
+  def find
     @fXTrade = FXTrade.find(params[:id])
   end
  

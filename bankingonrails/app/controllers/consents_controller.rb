@@ -4,7 +4,7 @@ class ConsentsController < ApplicationController
     @consents = Consent.all
   end
  
-  def show
+  def find
     @consent = Consent.find(params[:id])
   end
  

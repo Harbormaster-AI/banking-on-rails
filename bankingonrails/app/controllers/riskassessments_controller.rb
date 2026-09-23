@@ -4,7 +4,7 @@ class RiskAssessmentsController < ApplicationController
     @riskAssessments = RiskAssessment.all
   end
  
-  def show
+  def find
     @riskAssessment = RiskAssessment.find(params[:id])
   end
  

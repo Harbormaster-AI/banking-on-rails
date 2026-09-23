@@ -4,7 +4,7 @@ class IdentityDocumentsController < ApplicationController
     @identityDocuments = IdentityDocument.all
   end
  
-  def show
+  def find
     @identityDocument = IdentityDocument.find(params[:id])
   end
  

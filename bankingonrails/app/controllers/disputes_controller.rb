@@ -4,7 +4,7 @@ class DisputesController < ApplicationController
     @disputes = Dispute.all
   end
  
-  def show
+  def find
     @dispute = Dispute.find(params[:id])
   end
  

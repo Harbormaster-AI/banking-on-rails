@@ -4,7 +4,7 @@ class AccountStatementsController < ApplicationController
     @accountStatements = AccountStatement.all
   end
  
-  def show
+  def find
     @accountStatement = AccountStatement.find(params[:id])
   end
  

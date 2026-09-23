@@ -4,7 +4,7 @@ class RepaymentSchedulesController < ApplicationController
     @repaymentSchedules = RepaymentSchedule.all
   end
  
-  def show
+  def find
     @repaymentSchedule = RepaymentSchedule.find(params[:id])
   end
  
