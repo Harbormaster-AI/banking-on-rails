@@ -49,5 +49,6 @@ class BranchsController < ApplicationController
         :branch_code,
         :address,
         :phone,
+        :opening_hours
       )
 

@@ -49,5 +49,6 @@ class BanksController < ApplicationController
         :legal_name,
         :swift_bic,
         :headquarters_country,
+        :website
       )
 

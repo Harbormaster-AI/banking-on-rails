@@ -50,5 +50,6 @@ class AccountStatementsController < ApplicationController
         :period_end,
         :opening_balance,
         :closing_balance,
+        :_delivery_method
       )
 

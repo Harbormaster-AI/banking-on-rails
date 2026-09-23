@@ -51,5 +51,6 @@ class PaymentCardsController < ApplicationController
         :expiry_year,
         :_card_type,
         :_card_status,
+        :_network
       )
 

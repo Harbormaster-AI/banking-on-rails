@@ -47,5 +47,6 @@ class ScreeningResultsController < ApplicationController
       params.require(:_screening_result).permit(
         :screening_date,
         :provider,
+        :_outcome
       )
 

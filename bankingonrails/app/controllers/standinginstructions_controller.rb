@@ -49,5 +49,6 @@ class StandingInstructionsController < ApplicationController
         :amount,
         :next_execution_date,
         :_frequency,
+        :_status
       )
 

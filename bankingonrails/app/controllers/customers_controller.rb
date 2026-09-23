@@ -55,5 +55,6 @@ class CustomersController < ApplicationController
         :address,
         :_customer_type,
         :_risk_rating,
+        :_kyc_status
       )
 

@@ -52,5 +52,6 @@ class FundsTransfersController < ApplicationController
         :purpose,
         :fee_amount,
         :_method,
+        :_status
       )
 

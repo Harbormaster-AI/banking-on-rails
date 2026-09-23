@@ -53,5 +53,6 @@ class AccountsController < ApplicationController
         :closed_on,
         :_account_type,
         :_ownership_type,
+        :_status
       )
 

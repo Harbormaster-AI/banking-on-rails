@@ -49,5 +49,6 @@ class ExchangeRatesController < ApplicationController
         :counter_currency,
         :rate,
         :as_of,
+        :source
       )
 

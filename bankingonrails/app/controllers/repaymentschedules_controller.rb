@@ -50,5 +50,6 @@ class RepaymentSchedulesController < ApplicationController
         :principal_due,
         :interest_due,
         :total_due,
+        :_status
       )
 

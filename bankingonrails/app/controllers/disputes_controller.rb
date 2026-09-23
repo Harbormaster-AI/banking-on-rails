@@ -48,5 +48,6 @@ class DisputesController < ApplicationController
         :dispute_reference,
         :raised_on,
         :reason,
+        :_status
       )
 

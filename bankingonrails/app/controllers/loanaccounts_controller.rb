@@ -56,5 +56,6 @@ class LoanAccountsController < ApplicationController
         :_loan_type,
         :_rate_type,
         :_compounding,
+        :_status
       )
 

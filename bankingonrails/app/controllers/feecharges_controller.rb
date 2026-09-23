@@ -48,5 +48,6 @@ class FeeChargesController < ApplicationController
         :fee_code,
         :amount,
         :applied_on,
+        :_fee_type
       )
 

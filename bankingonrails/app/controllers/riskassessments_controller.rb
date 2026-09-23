@@ -47,5 +47,6 @@ class RiskAssessmentsController < ApplicationController
       params.require(:_risk_assessment).permit(
         :score,
         :assessed_on,
+        :_rating
       )
 

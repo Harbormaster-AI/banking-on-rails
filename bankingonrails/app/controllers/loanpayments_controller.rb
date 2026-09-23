@@ -49,5 +49,6 @@ class LoanPaymentsController < ApplicationController
         :amount,
         :payment_date,
         :_method,
+        :_status
       )
 

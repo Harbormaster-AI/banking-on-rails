@@ -51,5 +51,6 @@ class FXTradesController < ApplicationController
         :amount_sold,
         :amount_bought,
         :rate,
+        :_status
       )
 

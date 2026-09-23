@@ -49,5 +49,6 @@ class CollateralsController < ApplicationController
         :appraised_value,
         :description,
         :location,
+        :_collateral_type
       )
 

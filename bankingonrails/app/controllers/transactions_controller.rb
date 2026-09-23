@@ -52,5 +52,6 @@ class TransactionsController < ApplicationController
         :_direction,
         :_transaction_type,
         :_status,
+        :_channel
       )
 

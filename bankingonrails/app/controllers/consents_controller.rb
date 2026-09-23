@@ -48,5 +48,6 @@ class ConsentsController < ApplicationController
         :granted_on,
         :expires_on,
         :_consent_type,
+        :_status
       )
 

@@ -48,5 +48,6 @@ class BankingProductsController < ApplicationController
         :product_code,
         :name,
         :description,
+        :_product_category
       )
 

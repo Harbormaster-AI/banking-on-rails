@@ -47,5 +47,6 @@ class KycProfilesController < ApplicationController
       params.require(:_kyc_profile).permit(
         :profile_id,
         :last_reviewed_on,
+        :_status
       )
 

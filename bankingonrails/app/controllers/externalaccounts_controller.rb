@@ -50,5 +50,6 @@ class ExternalAccountsController < ApplicationController
         :account_number,
         :bic,
         :bank_name,
+        :country
       )
 

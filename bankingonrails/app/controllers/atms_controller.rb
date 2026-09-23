@@ -47,5 +47,6 @@ class ATMsController < ApplicationController
       params.require(:_a_t_m).permit(
         :terminal_id,
         :location,
+        :_status
       )
 

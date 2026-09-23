@@ -48,5 +48,6 @@ class IdentityDocumentsController < ApplicationController
         :document_number,
         :issuing_country,
         :expiration_date,
+        :_document_type
       )
 
