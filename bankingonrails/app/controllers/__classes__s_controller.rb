@@ -52,8 +52,9 @@ class ${className}sController < ApplicationController
 #set( $attributeName = "${Utils.camelToSnake( $attribute.getName() )}" )
 #set( $attributeName = ":${attributeName}" )
 #if ( $velocityCount < attributes.size() )
-#set( $attributeName = "${attributeName}, " )
+#set( $attributeName = "${attributeName}," )
         $attributeName
+#end
 #end
       )
 $generateAppStats.applyMetaDataTagWithCount( "Rest Controller Pattern", "Exposes application services through HTTP endpoints.", 8)
