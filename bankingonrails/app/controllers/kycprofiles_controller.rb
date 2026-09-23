@@ -44,7 +44,7 @@ class KycProfilesController < ApplicationController
  
   private
     def _kyc_profile_params
-      params.require(:_kyc_profile).permit(:profileId, :lastReviewedOn, :Status)
+      params.require(:_kyc_profile).permit(:profileId,\n\t\t\t :lastReviewedOn,\n\t\t\t :Status)
     end
 end
 

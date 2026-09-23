@@ -44,7 +44,7 @@ class RepaymentSchedulesController < ApplicationController
  
   private
     def _repayment_schedule_params
-      params.require(:_repayment_schedule).permit(:installmentNumber, :dueDate, :principalDue, :interestDue, :totalDue, :Status)
+      params.require(:_repayment_schedule).permit(:installmentNumber,\n\t\t\t :dueDate,\n\t\t\t :principalDue,\n\t\t\t :interestDue,\n\t\t\t :totalDue,\n\t\t\t :Status)
     end
 end
 

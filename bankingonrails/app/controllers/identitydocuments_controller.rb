@@ -44,7 +44,7 @@ class IdentityDocumentsController < ApplicationController
  
   private
     def _identity_document_params
-      params.require(:_identity_document).permit(:documentNumber, :issuingCountry, :expirationDate, :DocumentType)
+      params.require(:_identity_document).permit(:documentNumber,\n\t\t\t :issuingCountry,\n\t\t\t :expirationDate,\n\t\t\t :DocumentType)
     end
 end
 

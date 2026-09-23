@@ -44,7 +44,7 @@ class FeeChargesController < ApplicationController
  
   private
     def _fee_charge_params
-      params.require(:_fee_charge).permit(:feeCode, :amount, :appliedOn, :FeeType)
+      params.require(:_fee_charge).permit(:feeCode,\n\t\t\t :amount,\n\t\t\t :appliedOn,\n\t\t\t :FeeType)
     end
 end
 

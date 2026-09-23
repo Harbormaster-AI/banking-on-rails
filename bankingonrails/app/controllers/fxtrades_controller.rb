@@ -44,7 +44,7 @@ class FXTradesController < ApplicationController
  
   private
     def _f_x_trade_params
-      params.require(:_f_x_trade).permit(:tradeReference, :tradeDate, :settlementDate, :amountSold, :amountBought, :rate, :Status)
+      params.require(:_f_x_trade).permit(:tradeReference,\n\t\t\t :tradeDate,\n\t\t\t :settlementDate,\n\t\t\t :amountSold,\n\t\t\t :amountBought,\n\t\t\t :rate,\n\t\t\t :Status)
     end
 end
 

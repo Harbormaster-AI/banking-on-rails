@@ -44,7 +44,7 @@ class ScreeningResultsController < ApplicationController
  
   private
     def _screening_result_params
-      params.require(:_screening_result).permit(:screeningDate, :provider, :Outcome)
+      params.require(:_screening_result).permit(:screeningDate,\n\t\t\t :provider,\n\t\t\t :Outcome)
     end
 end
 

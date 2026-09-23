@@ -44,7 +44,7 @@ class TransactionsController < ApplicationController
  
   private
     def _transaction_params
-      params.require(:_transaction).permit(:bookingDate, :valueDate, :amount, :description, :Direction, :TransactionType, :Status, :Channel)
+      params.require(:_transaction).permit(:bookingDate,\n\t\t\t :valueDate,\n\t\t\t :amount,\n\t\t\t :description,\n\t\t\t :Direction,\n\t\t\t :TransactionType,\n\t\t\t :Status,\n\t\t\t :Channel)
     end
 end
 

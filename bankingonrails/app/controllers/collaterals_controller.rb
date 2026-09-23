@@ -44,7 +44,7 @@ class CollateralsController < ApplicationController
  
   private
     def _collateral_params
-      params.require(:_collateral).permit(:collateralIdentifier, :appraisedValue, :description, :location, :CollateralType)
+      params.require(:_collateral).permit(:collateralIdentifier,\n\t\t\t :appraisedValue,\n\t\t\t :description,\n\t\t\t :location,\n\t\t\t :CollateralType)
     end
 end
 

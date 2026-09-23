@@ -44,7 +44,7 @@ class AccountStatementsController < ApplicationController
  
   private
     def _account_statement_params
-      params.require(:_account_statement).permit(:statementNumber, :periodStart, :periodEnd, :openingBalance, :closingBalance, :DeliveryMethod)
+      params.require(:_account_statement).permit(:statementNumber,\n\t\t\t :periodStart,\n\t\t\t :periodEnd,\n\t\t\t :openingBalance,\n\t\t\t :closingBalance,\n\t\t\t :DeliveryMethod)
     end
 end
 

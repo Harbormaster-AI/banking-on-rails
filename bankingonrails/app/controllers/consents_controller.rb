@@ -44,7 +44,7 @@ class ConsentsController < ApplicationController
  
   private
     def _consent_params
-      params.require(:_consent).permit(:grantedOn, :expiresOn, :ConsentType, :Status)
+      params.require(:_consent).permit(:grantedOn,\n\t\t\t :expiresOn,\n\t\t\t :ConsentType,\n\t\t\t :Status)
     end
 end
 

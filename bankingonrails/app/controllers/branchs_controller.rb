@@ -44,7 +44,7 @@ class BranchsController < ApplicationController
  
   private
     def _branch_params
-      params.require(:_branch).permit(:name, :branchCode, :address, :phone, :openingHours)
+      params.require(:_branch).permit(:name,\n\t\t\t :branchCode,\n\t\t\t :address,\n\t\t\t :phone,\n\t\t\t :openingHours)
     end
 end
 

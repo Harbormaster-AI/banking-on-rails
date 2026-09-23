@@ -44,7 +44,7 @@ class BanksController < ApplicationController
  
   private
     def _bank_params
-      params.require(:_bank).permit(:name, :legalName, :swiftBic, :headquartersCountry, :website)
+      params.require(:_bank).permit(:name,\n\t\t\t :legalName,\n\t\t\t :swiftBic,\n\t\t\t :headquartersCountry,\n\t\t\t :website)
     end
 end
 

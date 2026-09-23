@@ -44,7 +44,7 @@ class ThirdPartyProvidersController < ApplicationController
  
   private
     def _third_party_provider_params
-      params.require(:_third_party_provider).permit(:name, :registrationId, :website)
+      params.require(:_third_party_provider).permit(:name,\n\t\t\t :registrationId,\n\t\t\t :website)
     end
 end
 

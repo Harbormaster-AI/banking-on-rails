@@ -44,7 +44,7 @@ class LoanPaymentsController < ApplicationController
  
   private
     def _loan_payment_params
-      params.require(:_loan_payment).permit(:paymentReference, :amount, :paymentDate, :Method, :Status)
+      params.require(:_loan_payment).permit(:paymentReference,\n\t\t\t :amount,\n\t\t\t :paymentDate,\n\t\t\t :Method,\n\t\t\t :Status)
     end
 end
 

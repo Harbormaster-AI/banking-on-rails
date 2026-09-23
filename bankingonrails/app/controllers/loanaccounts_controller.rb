@@ -44,7 +44,7 @@ class LoanAccountsController < ApplicationController
  
   private
     def _loan_account_params
-      params.require(:_loan_account).permit(:loanNumber, :principalAmount, :outstandingPrincipal, :interestRate, :originationDate, :maturityDate, :paymentDayOfMonth, :currency, :LoanType, :RateType, :Compounding, :Status)
+      params.require(:_loan_account).permit(:loanNumber,\n\t\t\t :principalAmount,\n\t\t\t :outstandingPrincipal,\n\t\t\t :interestRate,\n\t\t\t :originationDate,\n\t\t\t :maturityDate,\n\t\t\t :paymentDayOfMonth,\n\t\t\t :currency,\n\t\t\t :LoanType,\n\t\t\t :RateType,\n\t\t\t :Compounding,\n\t\t\t :Status)
     end
 end
 

@@ -44,7 +44,7 @@ class ExchangeRatesController < ApplicationController
  
   private
     def _exchange_rate_params
-      params.require(:_exchange_rate).permit(:baseCurrency, :counterCurrency, :rate, :asOf, :source)
+      params.require(:_exchange_rate).permit(:baseCurrency,\n\t\t\t :counterCurrency,\n\t\t\t :rate,\n\t\t\t :asOf,\n\t\t\t :source)
     end
 end
 

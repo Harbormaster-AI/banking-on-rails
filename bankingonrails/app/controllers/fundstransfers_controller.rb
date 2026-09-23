@@ -44,7 +44,7 @@ class FundsTransfersController < ApplicationController
  
   private
     def _funds_transfer_params
-      params.require(:_funds_transfer).permit(:transferReference, :amount, :requestedDate, :executionDate, :purpose, :feeAmount, :Method, :Status)
+      params.require(:_funds_transfer).permit(:transferReference,\n\t\t\t :amount,\n\t\t\t :requestedDate,\n\t\t\t :executionDate,\n\t\t\t :purpose,\n\t\t\t :feeAmount,\n\t\t\t :Method,\n\t\t\t :Status)
     end
 end
 

@@ -44,7 +44,7 @@ class ATMsController < ApplicationController
  
   private
     def _a_t_m_params
-      params.require(:_a_t_m).permit(:terminalId, :location, :Status)
+      params.require(:_a_t_m).permit(:terminalId,\n\t\t\t :location,\n\t\t\t :Status)
     end
 end
 

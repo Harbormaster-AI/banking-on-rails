@@ -44,7 +44,7 @@ class StandingInstructionsController < ApplicationController
  
   private
     def _standing_instruction_params
-      params.require(:_standing_instruction).permit(:instructionId, :amount, :nextExecutionDate, :Frequency, :Status)
+      params.require(:_standing_instruction).permit(:instructionId,\n\t\t\t :amount,\n\t\t\t :nextExecutionDate,\n\t\t\t :Frequency,\n\t\t\t :Status)
     end
 end
 

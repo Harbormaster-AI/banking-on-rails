@@ -44,7 +44,7 @@ class AccountsController < ApplicationController
  
   private
     def _account_params
-      params.require(:_account).permit(:accountNumber, :iban, :accountName, :currency, :openedOn, :closedOn, :AccountType, :OwnershipType, :Status)
+      params.require(:_account).permit(:accountNumber,\n\t\t\t :iban,\n\t\t\t :accountName,\n\t\t\t :currency,\n\t\t\t :openedOn,\n\t\t\t :closedOn,\n\t\t\t :AccountType,\n\t\t\t :OwnershipType,\n\t\t\t :Status)
     end
 end
 

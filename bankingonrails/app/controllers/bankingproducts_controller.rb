@@ -44,7 +44,7 @@ class BankingProductsController < ApplicationController
  
   private
     def _banking_product_params
-      params.require(:_banking_product).permit(:productCode, :name, :description, :ProductCategory)
+      params.require(:_banking_product).permit(:productCode,\n\t\t\t :name,\n\t\t\t :description,\n\t\t\t :ProductCategory)
     end
 end
 

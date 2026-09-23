@@ -44,7 +44,7 @@ class PaymentCardsController < ApplicationController
  
   private
     def _payment_card_params
-      params.require(:_payment_card).permit(:cardNumber, :embossedName, :expiryMonth, :expiryYear, :CardType, :CardStatus, :Network)
+      params.require(:_payment_card).permit(:cardNumber,\n\t\t\t :embossedName,\n\t\t\t :expiryMonth,\n\t\t\t :expiryYear,\n\t\t\t :CardType,\n\t\t\t :CardStatus,\n\t\t\t :Network)
     end
 end
 

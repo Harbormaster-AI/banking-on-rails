@@ -44,7 +44,7 @@ class RiskAssessmentsController < ApplicationController
  
   private
     def _risk_assessment_params
-      params.require(:_risk_assessment).permit(:score, :assessedOn, :Rating)
+      params.require(:_risk_assessment).permit(:score,\n\t\t\t :assessedOn,\n\t\t\t :Rating)
     end
 end
 

@@ -44,7 +44,7 @@ class ExternalAccountsController < ApplicationController
  
   private
     def _external_account_params
-      params.require(:_external_account).permit(:name, :iban, :accountNumber, :bic, :bankName, :country)
+      params.require(:_external_account).permit(:name,\n\t\t\t :iban,\n\t\t\t :accountNumber,\n\t\t\t :bic,\n\t\t\t :bankName,\n\t\t\t :country)
     end
 end
 

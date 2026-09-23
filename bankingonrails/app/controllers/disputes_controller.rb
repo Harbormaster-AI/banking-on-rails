@@ -44,7 +44,7 @@ class DisputesController < ApplicationController
  
   private
     def _dispute_params
-      params.require(:_dispute).permit(:disputeReference, :raisedOn, :reason, :Status)
+      params.require(:_dispute).permit(:disputeReference,\n\t\t\t :raisedOn,\n\t\t\t :reason,\n\t\t\t :Status)
     end
 end
 
