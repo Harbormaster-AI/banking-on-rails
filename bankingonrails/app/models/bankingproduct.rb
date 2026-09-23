@@ -1,4 +1,3 @@
-
 class BankingProduct < ApplicationRecord
   enum _PRODUCT_CATEGORY: [:Deposit, :Loan, :Card, :PaymentService, :Investment]
 
@@ -9,3 +8,4 @@ class BankingProduct < ApplicationRecord
   has_many :PaymentCards, class_name: 'PaymentCard'
 
 end
+

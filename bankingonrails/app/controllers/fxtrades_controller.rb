@@ -1,4 +1,3 @@
-
 class FXTradesController < ApplicationController
   def index
     @_f_x_trades = FXTrade.all
@@ -48,3 +47,4 @@ class FXTradesController < ApplicationController
       params.require(:_f_x_trade).permit(:tradeReference, :tradeDate, :settlementDate, :amountSold, :amountBought, :rate, :Status)
     end
 end
+

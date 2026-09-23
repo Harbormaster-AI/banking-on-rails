@@ -1,4 +1,3 @@
-
 class Customer < ApplicationRecord
   enum _CUSTOMER_TYPE: [:Individual, :Business, :NonProfit, :Government]
   enum _RISK_RATING: [:Low, :Medium, :High]
@@ -26,3 +25,4 @@ class Customer < ApplicationRecord
   has_many :Consents, class_name: 'Consent'
 
 end
+

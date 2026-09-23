@@ -1,4 +1,3 @@
-
 class IdentityDocumentsController < ApplicationController
   def index
     @_identity_documents = IdentityDocument.all
@@ -48,3 +47,4 @@ class IdentityDocumentsController < ApplicationController
       params.require(:_identity_document).permit(:documentNumber, :issuingCountry, :expirationDate, :DocumentType)
     end
 end
+

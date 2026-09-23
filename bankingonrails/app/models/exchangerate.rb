@@ -1,4 +1,3 @@
-
 class ExchangeRate < ApplicationRecord
 
 
@@ -6,3 +5,4 @@ class ExchangeRate < ApplicationRecord
   has_many :FxTrades, class_name: 'FXTrade'
 
 end
+

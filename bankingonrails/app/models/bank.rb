@@ -1,4 +1,3 @@
-
 class Bank < ApplicationRecord
 
 
@@ -19,3 +18,4 @@ class Bank < ApplicationRecord
   has_many :ThirdPartyProviders, class_name: 'ThirdPartyProvider'
 
 end
+

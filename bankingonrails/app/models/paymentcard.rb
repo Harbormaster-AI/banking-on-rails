@@ -1,4 +1,3 @@
-
 class PaymentCard < ApplicationRecord
   enum _CARD_TYPE: [:Debit, :Credit, :Prepaid, :Virtual]
   enum _CARD_STATUS: [:Active, :Blocked, :LostStolen, :Expired, :Closed]
@@ -17,3 +16,4 @@ class PaymentCard < ApplicationRecord
   has_many :Transactions, class_name: 'Transaction'
 
 end
+

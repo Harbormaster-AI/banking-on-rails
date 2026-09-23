@@ -1,4 +1,3 @@
-
 class FeeChargesController < ApplicationController
   def index
     @_fee_charges = FeeCharge.all
@@ -48,3 +47,4 @@ class FeeChargesController < ApplicationController
       params.require(:_fee_charge).permit(:feeCode, :amount, :appliedOn, :FeeType)
     end
 end
+

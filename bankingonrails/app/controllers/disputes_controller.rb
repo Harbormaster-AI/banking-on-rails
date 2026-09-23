@@ -1,4 +1,3 @@
-
 class DisputesController < ApplicationController
   def index
     @_disputes = Dispute.all
@@ -48,3 +47,4 @@ class DisputesController < ApplicationController
       params.require(:_dispute).permit(:disputeReference, :raisedOn, :reason, :Status)
     end
 end
+

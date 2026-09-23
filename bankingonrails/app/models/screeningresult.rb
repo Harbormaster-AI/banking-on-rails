@@ -1,4 +1,3 @@
-
 class ScreeningResult < ApplicationRecord
   enum _OUTCOME: [:Clear, :Match, :Review]
 
@@ -6,3 +5,4 @@ class ScreeningResult < ApplicationRecord
   has_many :KycProfile, class_name: 'KycProfile'
 
 end
+

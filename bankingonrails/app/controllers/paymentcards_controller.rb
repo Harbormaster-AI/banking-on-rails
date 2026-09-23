@@ -1,4 +1,3 @@
-
 class PaymentCardsController < ApplicationController
   def index
     @_payment_cards = PaymentCard.all
@@ -48,3 +47,4 @@ class PaymentCardsController < ApplicationController
       params.require(:_payment_card).permit(:cardNumber, :embossedName, :expiryMonth, :expiryYear, :CardType, :CardStatus, :Network)
     end
 end
+

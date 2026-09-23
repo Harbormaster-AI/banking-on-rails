@@ -1,4 +1,3 @@
-
 class RepaymentSchedule < ApplicationRecord
   enum _STATUS: [:Due, :Paid, :Overdue, :Deferred]
 
@@ -28,3 +27,4 @@ class RepaymentSchedule < ApplicationRecord
   has_many :Payment, class_name: 'LoanPayment'
 
 end
+

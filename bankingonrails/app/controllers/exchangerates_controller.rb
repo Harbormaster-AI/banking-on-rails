@@ -1,4 +1,3 @@
-
 class ExchangeRatesController < ApplicationController
   def index
     @_exchange_rates = ExchangeRate.all
@@ -48,3 +47,4 @@ class ExchangeRatesController < ApplicationController
       params.require(:_exchange_rate).permit(:baseCurrency, :counterCurrency, :rate, :asOf, :source)
     end
 end
+

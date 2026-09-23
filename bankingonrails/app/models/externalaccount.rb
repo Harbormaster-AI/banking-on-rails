@@ -1,4 +1,3 @@
-
 class ExternalAccount < ApplicationRecord
 
 
@@ -24,3 +23,4 @@ class ExternalAccount < ApplicationRecord
   has_many :Transactions, class_name: 'Transaction'
 
 end
+

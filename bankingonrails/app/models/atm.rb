@@ -1,4 +1,3 @@
-
 class ATM < ApplicationRecord
   enum _STATUS: [:InService, :OutOfService, :Maintenance]
 
@@ -16,3 +15,4 @@ class ATM < ApplicationRecord
   has_many :Branch, class_name: 'Branch'
 
 end
+

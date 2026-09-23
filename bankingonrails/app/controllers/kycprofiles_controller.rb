@@ -1,4 +1,3 @@
-
 class KycProfilesController < ApplicationController
   def index
     @_kyc_profiles = KycProfile.all
@@ -48,3 +47,4 @@ class KycProfilesController < ApplicationController
       params.require(:_kyc_profile).permit(:profileId, :lastReviewedOn, :Status)
     end
 end
+

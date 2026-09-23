@@ -1,4 +1,3 @@
-
 class LoanAccountsController < ApplicationController
   def index
     @_loan_accounts = LoanAccount.all
@@ -48,3 +47,4 @@ class LoanAccountsController < ApplicationController
       params.require(:_loan_account).permit(:loanNumber, :principalAmount, :outstandingPrincipal, :interestRate, :originationDate, :maturityDate, :paymentDayOfMonth, :currency, :LoanType, :RateType, :Compounding, :Status)
     end
 end
+

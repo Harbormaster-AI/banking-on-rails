@@ -1,4 +1,3 @@
-
 class LoanPayment < ApplicationRecord
   enum _METHOD: [:InternalTransfer, :ACH, :Wire, :SEPA, :SWIFT, :Card, :Cash, :Check, :MobileWallet]
   enum _STATUS: [:Initiated, :InProcess, :Settled, :Failed, :Reversed, :Cancelled]
@@ -15,3 +14,4 @@ class LoanPayment < ApplicationRecord
   has_many :Transaction, class_name: 'Transaction'
 
 end
+

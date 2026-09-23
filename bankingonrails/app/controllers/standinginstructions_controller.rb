@@ -1,4 +1,3 @@
-
 class StandingInstructionsController < ApplicationController
   def index
     @_standing_instructions = StandingInstruction.all
@@ -48,3 +47,4 @@ class StandingInstructionsController < ApplicationController
       params.require(:_standing_instruction).permit(:instructionId, :amount, :nextExecutionDate, :Frequency, :Status)
     end
 end
+

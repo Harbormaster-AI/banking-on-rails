@@ -1,4 +1,3 @@
-
 class FeeCharge < ApplicationRecord
   enum _FEE_TYPE: [:Maintenance, :Overdraft, :Wire, :ATM, :CardAnnual, :LatePayment, :EarlyWithdrawal, :ReplacementCard]
 
@@ -14,3 +13,4 @@ class FeeCharge < ApplicationRecord
   has_many :LoanAccount, class_name: 'LoanAccount'
 
 end
+

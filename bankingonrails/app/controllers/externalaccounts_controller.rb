@@ -1,4 +1,3 @@
-
 class ExternalAccountsController < ApplicationController
   def index
     @_external_accounts = ExternalAccount.all
@@ -48,3 +47,4 @@ class ExternalAccountsController < ApplicationController
       params.require(:_external_account).permit(:name, :iban, :accountNumber, :bic, :bankName, :country)
     end
 end
+

@@ -1,4 +1,3 @@
-
 class TransactionsController < ApplicationController
   def index
     @_transactions = Transaction.all
@@ -48,3 +47,4 @@ class TransactionsController < ApplicationController
       params.require(:_transaction).permit(:bookingDate, :valueDate, :amount, :description, :Direction, :TransactionType, :Status, :Channel)
     end
 end
+

@@ -1,4 +1,3 @@
-
 class IdentityDocument < ApplicationRecord
   enum _DOCUMENT_TYPE: [:Passport, :NationalID, :DriverLicense, :ResidencePermit, :BusinessRegistration, :TaxCertificate]
 
@@ -6,3 +5,4 @@ class IdentityDocument < ApplicationRecord
   has_many :KycProfile, class_name: 'KycProfile'
 
 end
+

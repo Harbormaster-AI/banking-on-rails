@@ -1,4 +1,3 @@
-
 class ThirdPartyProvidersController < ApplicationController
   def index
     @_third_party_providers = ThirdPartyProvider.all
@@ -48,3 +47,4 @@ class ThirdPartyProvidersController < ApplicationController
       params.require(:_third_party_provider).permit(:name, :registrationId, :website)
     end
 end
+

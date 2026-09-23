@@ -1,4 +1,3 @@
-
 class BranchsController < ApplicationController
   def index
     @_branchs = Branch.all
@@ -48,3 +47,4 @@ class BranchsController < ApplicationController
       params.require(:_branch).permit(:name, :branchCode, :address, :phone, :openingHours)
     end
 end
+

@@ -1,4 +1,3 @@
-
 class Branch < ApplicationRecord
 
 
@@ -18,3 +17,4 @@ class Branch < ApplicationRecord
   has_many :Atms, class_name: 'ATM'
 
 end
+

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "application#health"
 
-  resources :banks do
+  resources :_banks do
 
     resources :branches
     resources :products
@@ -13,18 +13,18 @@ Rails.application.routes.draw do
     resources :consents
     resources :thirdpartyproviders
   end
-  resources :branchs do
+  resources :_branchs do
 
     resource :bank
     resources :accounts
     resources :loanaccounts
     resources :atms
   end
-  resources :atms do
+  resources :_a_t_ms do
 
     resource :branch
   end
-  resources :customers do
+  resources :_customers do
 
     resource :bank
     resources :accounts
@@ -36,33 +36,33 @@ Rails.application.routes.draw do
     resources :kycprofiles
     resources :consents
   end
-  resources :kycprofiles do
+  resources :_kyc_profiles do
 
     resource :customer
     resources :identitydocuments
     resources :riskassessments
     resources :screenings
   end
-  resources :identitydocuments do
+  resources :_identity_documents do
 
     resource :kycprofile
   end
-  resources :riskassessments do
+  resources :_risk_assessments do
 
     resource :kycprofile
   end
-  resources :screeningresults do
+  resources :_screening_results do
 
     resource :kycprofile
   end
-  resources :bankingproducts do
+  resources :_banking_products do
 
     resource :bank
     resources :accounts
     resources :loanaccounts
     resources :paymentcards
   end
-  resources :accounts do
+  resources :_accounts do
 
     resource :bank
     resource :branch
@@ -73,11 +73,11 @@ Rails.application.routes.draw do
     resources :standinginstructions
     resources :feecharges
   end
-  resources :accountstatements do
+  resources :_account_statements do
 
     resource :account
   end
-  resources :transactions do
+  resources :_transactions do
 
     resource :account
     resource :externalcounterparty
@@ -86,12 +86,12 @@ Rails.application.routes.draw do
     resource :fxtrade
     resource :dispute
   end
-  resources :externalaccounts do
+  resources :_external_accounts do
 
     resource :customer
     resources :transactions
   end
-  resources :fundstransfers do
+  resources :_funds_transfers do
 
     resource :sourceaccount
     resource :destinationaccount
@@ -99,19 +99,19 @@ Rails.application.routes.draw do
     resource :initiatedby
     resources :transactions
   end
-  resources :standinginstructions do
+  resources :_standing_instructions do
 
     resource :account
     resource :beneficiary
   end
-  resources :paymentcards do
+  resources :_payment_cards do
 
     resource :bank
     resource :account
     resource :customer
     resources :transactions
   end
-  resources :loanaccounts do
+  resources :_loan_accounts do
 
     resource :bank
     resource :branch
@@ -122,31 +122,31 @@ Rails.application.routes.draw do
     resources :collateral
     resources :feecharges
   end
-  resources :repaymentschedules do
+  resources :_repayment_schedules do
 
     resource :loanaccount
     resource :payment
   end
-  resources :loanpayments do
+  resources :_loan_payments do
 
     resource :loanaccount
     resource :transaction
   end
-  resources :collaterals do
+  resources :_collaterals do
 
     resource :loanaccount
   end
-  resources :feecharges do
+  resources :_fee_charges do
 
     resource :account
     resource :loanaccount
   end
-  resources :exchangerates do
+  resources :_exchange_rates do
 
     resource :bank
     resources :fxtrades
   end
-  resources :fxtrades do
+  resources :_f_x_trades do
 
     resource :customer
     resource :bank
@@ -155,21 +155,21 @@ Rails.application.routes.draw do
     resource :destinationaccount
     resource :transaction
   end
-  resources :disputes do
+  resources :_disputes do
 
     resource :transaction
     resource :customer
     resource :account
     resource :paymentcard
   end
-  resources :consents do
+  resources :_consents do
 
     resource :customer
     resource :bank
     resources :authorizedaccounts
     resource :thirdpartyprovider
   end
-  resources :thirdpartyproviders do
+  resources :_third_party_providers do
 
     resource :bank
     resources :consents

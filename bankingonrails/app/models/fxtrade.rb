@@ -1,4 +1,3 @@
-
 class FXTrade < ApplicationRecord
   enum _STATUS: [:Booked, :Settled, :Cancelled]
 
@@ -25,3 +24,4 @@ class FXTrade < ApplicationRecord
   has_many :Transaction, class_name: 'Transaction'
 
 end
+

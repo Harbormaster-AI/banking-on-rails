@@ -1,4 +1,3 @@
-
 class KycProfile < ApplicationRecord
   enum _STATUS: [:Pending, :Verified, :Rejected, :Expired]
 
@@ -9,3 +8,4 @@ class KycProfile < ApplicationRecord
   has_many :Screenings, class_name: 'ScreeningResult'
 
 end
+

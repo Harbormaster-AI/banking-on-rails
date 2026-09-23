@@ -1,4 +1,3 @@
-
 class FundsTransfer < ApplicationRecord
   enum _METHOD: [:InternalTransfer, :ACH, :Wire, :SEPA, :SWIFT, :Card, :Cash, :Check, :MobileWallet]
   enum _STATUS: [:Initiated, :InProcess, :Settled, :Failed, :Reversed, :Cancelled]
@@ -25,3 +24,4 @@ class FundsTransfer < ApplicationRecord
   has_many :Transactions, class_name: 'Transaction'
 
 end
+

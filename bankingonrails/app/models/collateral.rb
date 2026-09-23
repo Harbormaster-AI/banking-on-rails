@@ -1,4 +1,3 @@
-
 class Collateral < ApplicationRecord
   enum _COLLATERAL_TYPE: [:RealEstate, :Vehicle, :Cash, :Securities, :Guarantee, :Equipment]
 
@@ -23,3 +22,4 @@ class Collateral < ApplicationRecord
   has_many :LoanAccount, class_name: 'LoanAccount'
 
 end
+

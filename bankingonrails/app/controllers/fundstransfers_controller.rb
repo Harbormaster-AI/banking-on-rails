@@ -1,4 +1,3 @@
-
 class FundsTransfersController < ApplicationController
   def index
     @_funds_transfers = FundsTransfer.all
@@ -48,3 +47,4 @@ class FundsTransfersController < ApplicationController
       params.require(:_funds_transfer).permit(:transferReference, :amount, :requestedDate, :executionDate, :purpose, :feeAmount, :Method, :Status)
     end
 end
+

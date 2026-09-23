@@ -1,4 +1,3 @@
-
 class ThirdPartyProvider < ApplicationRecord
 
 
@@ -6,3 +5,4 @@ class ThirdPartyProvider < ApplicationRecord
   has_many :Consents, class_name: 'Consent'
 
 end
+

@@ -1,4 +1,3 @@
-
 class RiskAssessmentsController < ApplicationController
   def index
     @_risk_assessments = RiskAssessment.all
@@ -48,3 +47,4 @@ class RiskAssessmentsController < ApplicationController
       params.require(:_risk_assessment).permit(:score, :assessedOn, :Rating)
     end
 end
+

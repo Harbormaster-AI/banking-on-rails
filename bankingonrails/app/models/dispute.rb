@@ -1,4 +1,3 @@
-
 class Dispute < ApplicationRecord
   enum _STATUS: [:Open, :UnderReview, :Resolved, :Rejected, :Withdrawn]
 
@@ -9,3 +8,4 @@ class Dispute < ApplicationRecord
   has_many :PaymentCard, class_name: 'PaymentCard'
 
 end
+

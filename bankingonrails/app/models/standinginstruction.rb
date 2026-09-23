@@ -1,4 +1,3 @@
-
 class StandingInstruction < ApplicationRecord
   enum _FREQUENCY: [:OneTime, :Weekly, :BiWeekly, :Monthly, :Quarterly, :Annually]
   enum _STATUS: [:Active, :Paused, :Cancelled, :Completed]
@@ -15,3 +14,4 @@ class StandingInstruction < ApplicationRecord
   has_many :Beneficiary, class_name: 'ExternalAccount'
 
 end
+

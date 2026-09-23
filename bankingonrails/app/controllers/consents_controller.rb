@@ -1,4 +1,3 @@
-
 class ConsentsController < ApplicationController
   def index
     @_consents = Consent.all
@@ -48,3 +47,4 @@ class ConsentsController < ApplicationController
       params.require(:_consent).permit(:grantedOn, :expiresOn, :ConsentType, :Status)
     end
 end
+

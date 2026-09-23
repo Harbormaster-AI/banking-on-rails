@@ -1,4 +1,3 @@
-
 class ATMsController < ApplicationController
   def index
     @_a_t_ms = ATM.all
@@ -48,3 +47,4 @@ class ATMsController < ApplicationController
       params.require(:_a_t_m).permit(:terminalId, :location, :Status)
     end
 end
+

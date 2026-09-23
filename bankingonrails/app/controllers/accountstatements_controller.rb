@@ -1,4 +1,3 @@
-
 class AccountStatementsController < ApplicationController
   def index
     @_account_statements = AccountStatement.all
@@ -48,3 +47,4 @@ class AccountStatementsController < ApplicationController
       params.require(:_account_statement).permit(:statementNumber, :periodStart, :periodEnd, :openingBalance, :closingBalance, :DeliveryMethod)
     end
 end
+

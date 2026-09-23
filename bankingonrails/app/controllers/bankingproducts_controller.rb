@@ -1,4 +1,3 @@
-
 class BankingProductsController < ApplicationController
   def index
     @_banking_products = BankingProduct.all
@@ -48,3 +47,4 @@ class BankingProductsController < ApplicationController
       params.require(:_banking_product).permit(:productCode, :name, :description, :ProductCategory)
     end
 end
+

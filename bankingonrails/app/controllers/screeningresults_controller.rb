@@ -1,4 +1,3 @@
-
 class ScreeningResultsController < ApplicationController
   def index
     @_screening_results = ScreeningResult.all
@@ -48,3 +47,4 @@ class ScreeningResultsController < ApplicationController
       params.require(:_screening_result).permit(:screeningDate, :provider, :Outcome)
     end
 end
+

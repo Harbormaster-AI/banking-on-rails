@@ -1,4 +1,3 @@
-
 class Account < ApplicationRecord
   enum _ACCOUNT_TYPE: [:Checking, :Savings, :MoneyMarket, :TimeDeposit]
   enum _OWNERSHIP_TYPE: [:Sole, :Joint, :Corporate, :Trust]
@@ -27,3 +26,4 @@ class Account < ApplicationRecord
   has_many :FeeCharges, class_name: 'FeeCharge'
 
 end
+

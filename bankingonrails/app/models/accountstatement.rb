@@ -1,4 +1,3 @@
-
 class AccountStatement < ApplicationRecord
   enum _DELIVERY_METHOD: [:Electronic, :Paper]
 
@@ -20,3 +19,4 @@ class AccountStatement < ApplicationRecord
   has_many :Account, class_name: 'Account'
 
 end
+

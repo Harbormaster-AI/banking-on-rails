@@ -1,4 +1,3 @@
-
 class RiskAssessment < ApplicationRecord
   enum _RATING: [:Low, :Medium, :High]
 
@@ -6,3 +5,4 @@ class RiskAssessment < ApplicationRecord
   has_many :KycProfile, class_name: 'KycProfile'
 
 end
+

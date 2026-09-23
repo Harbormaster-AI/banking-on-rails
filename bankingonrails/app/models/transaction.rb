@@ -1,4 +1,3 @@
-
 class Transaction < ApplicationRecord
   enum _DIRECTION: [:Credit, :Debit]
   enum _TRANSACTION_TYPE: [:Deposit, :Withdrawal, :Transfer, :Payment, :Fee, :Interest, :Adjustment, :Chargeback, :Refund, :FXConversion]
@@ -21,3 +20,4 @@ class Transaction < ApplicationRecord
   has_many :Dispute, class_name: 'Dispute'
 
 end
+

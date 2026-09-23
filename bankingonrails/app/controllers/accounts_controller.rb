@@ -1,4 +1,3 @@
-
 class AccountsController < ApplicationController
   def index
     @_accounts = Account.all
@@ -48,3 +47,4 @@ class AccountsController < ApplicationController
       params.require(:_account).permit(:accountNumber, :iban, :accountName, :currency, :openedOn, :closedOn, :AccountType, :OwnershipType, :Status)
     end
 end
+

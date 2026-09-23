@@ -1,4 +1,3 @@
-
 class LoanAccount < ApplicationRecord
   enum _LOAN_TYPE: [:Mortgage, :Personal, :Auto, :SmallBusiness, :CreditLine, :Student]
   enum _RATE_TYPE: [:Fixed, :Variable]
@@ -36,3 +35,4 @@ class LoanAccount < ApplicationRecord
   has_many :FeeCharges, class_name: 'FeeCharge'
 
 end
+

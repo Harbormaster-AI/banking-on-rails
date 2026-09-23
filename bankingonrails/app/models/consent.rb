@@ -1,4 +1,3 @@
-
 class Consent < ApplicationRecord
   enum _CONSENT_TYPE: [:OpenBanking, :PaymentInitiation, :AccountInformation, :Marketing, :DataSharing]
   enum _STATUS: [:Active, :Revoked, :Expired]
@@ -10,3 +9,4 @@ class Consent < ApplicationRecord
   has_many :ThirdPartyProvider, class_name: 'ThirdPartyProvider'
 
 end
+

@@ -1,4 +1,3 @@
-
 class RepaymentSchedulesController < ApplicationController
   def index
     @_repayment_schedules = RepaymentSchedule.all
@@ -48,3 +47,4 @@ class RepaymentSchedulesController < ApplicationController
       params.require(:_repayment_schedule).permit(:installmentNumber, :dueDate, :principalDue, :interestDue, :totalDue, :Status)
     end
 end
+

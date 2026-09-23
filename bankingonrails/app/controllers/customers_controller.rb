@@ -1,4 +1,3 @@
-
 class CustomersController < ApplicationController
   def index
     @_customers = Customer.all
@@ -48,3 +47,4 @@ class CustomersController < ApplicationController
       params.require(:_customer).permit(:firstName, :lastName, :legalName, :dateOfBirth, :taxId, :email, :phone, :address, :CustomerType, :RiskRating, :KycStatus)
     end
 end
+
